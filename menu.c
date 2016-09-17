@@ -15,6 +15,9 @@
 #include "instrucoes.c"
 #include "personagem.c"
 #include "letras.c"
+#include "barco.c"
+#include "casa.c"
+#include "dado.c"
 
 //Definição de constantes
 const int ALTURA = 700;
@@ -35,6 +38,7 @@ int main(void){
     ALLEGRO_AUDIO_STREAM * voz2 = NULL;
     ALLEGRO_AUDIO_STREAM * voz3 = NULL;
     ALLEGRO_FONT * fonte = NULL;
+
 
     //Declaração de variáveis
     bool aberto = true;
@@ -67,6 +71,7 @@ int main(void){
     voz1 = al_load_sample("Narrador/Instrucoes.ogg");
     voz2 = al_load_sample("Narrador/sobre.ogg");
     voz3 = al_load_sample("Narrador/sair.ogg");
+
 
     //Adição do eventos na fila
     al_register_event_source(fila_eventos, al_get_display_event_source(janela));
@@ -139,6 +144,7 @@ int main(void){
                 if(evento.mouse.x > LARGURA * 0.04 && evento.mouse.x < LARGURA * 0.04 + al_get_bitmap_width(play)){
                     if(evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play)){
                         sel1 = true;
+
                     }else{
                         sel1 = false;
                     }
@@ -175,7 +181,6 @@ int main(void){
                     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.56, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.58, 0, "Jogar");//Escrevendo a opção no Menu;
                 }
-
                 if(sel2){
                     al_draw_bitmap(play_sel, LARGURA * 0.04, ALTURA * 0.66, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.68, 0, "Ajuda");//Escrevendo a opção no Menu;
@@ -184,12 +189,13 @@ int main(void){
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.66, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.68, 0, "Ajuda");//Escrevendo a opção no Menu;
-                }
+            }
 
                 if(sel3){
                     al_draw_bitmap(play_sel, LARGURA * 0.04, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.78, 0, "Sobre");//Escrevendo a opção no Menu;
+                   al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.78, 0, "Sobre");//Escrevendo a opção no Menu;
                     al_play_sample(voz2,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
+
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.76, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.78, 0, "Sobre");//Escrevendo a opção no Menu;
@@ -199,6 +205,7 @@ int main(void){
                     al_draw_bitmap(play_sel, LARGURA * 0.04, ALTURA * 0.86, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.88, 0, "Sair");//Escrevendo a opção no Menu;
                     al_play_sample(voz3,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
+
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.86,0);//desenhar(play);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.88, 0, "Sair");//Escrevendo a opção no Menu;

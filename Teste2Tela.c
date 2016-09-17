@@ -17,6 +17,7 @@ int teste(int FPS,int ALTURA,int LARGURA){
     ALLEGRO_AUDIO_STREAM * voz1 = NULL;
     ALLEGRO_AUDIO_STREAM * voz2 = NULL;
 
+
     //Declaração de variáveis
     bool aberto = true;
     bool sel1 = false,
@@ -56,9 +57,11 @@ int teste(int FPS,int ALTURA,int LARGURA){
     al_draw_bitmap(play, LARGURA * 0.2, ALTURA * 0.4, 0);
     al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.4, 0);
 
+
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.21, ALTURA * 0.41, 0, "Portugues");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.41, 0, "Ingles");
+
 
     al_flip_display();
 
@@ -131,12 +134,12 @@ int teste(int FPS,int ALTURA,int LARGURA){
                 if(evento.mouse.x >= LARGURA * 0.6 && evento.mouse.x <= LARGURA * 0.6 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.4 && evento.mouse.y <= ALTURA * 0.4 + al_get_bitmap_height(play)){
                     al_destroy_display(janela);
-                    personagens(FPS, ALTURA, LARGURA);
+                    personagens(FPS, LARGURA, ALTURA);
                 }
                 if(evento.mouse.x >= LARGURA * 0.2 && evento.mouse.x <= LARGURA * 0.2 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.4 && evento.mouse.y <= ALTURA * 0.4 + al_get_bitmap_height(play)){
                     al_destroy_display(janela);
-                    letras(FPS, ALTURA, LARGURA);
+                    personagens(FPS, LARGURA, ALTURA);
                 }
             }
         }
