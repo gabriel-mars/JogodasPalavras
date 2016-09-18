@@ -28,8 +28,10 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel)
     bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
-    int cont;
-    cont = 0;
+    bool let1 = false;
+    bool let2 = false;
+    bool let3 = false;
+    bool let4 = false;
 
     //Inicialização das bibliotecas
     al_init();
@@ -134,7 +136,7 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel)
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "O");//Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "X");//Escrevendo a opção no Menu;
                     al_flip_display();
-                    cont = cont +1;
+                    let1 = true;
 
                     }
                 if(evento.mouse.x > LARGURA * 0.3 && evento.mouse.x < LARGURA * 0.3 + al_get_bitmap_width(caixa1) &&
@@ -160,8 +162,8 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel)
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "O");//Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "X");//Escrevendo a opção no Menu;
                     al_flip_display();
-            cont = cont+1;
-                    }
+                        let2 = true;
+                        }
     if(evento.mouse.x > LARGURA * 0.5 && evento.mouse.x < LARGURA * 0.5 + al_get_bitmap_width(caixa1) &&
     evento.mouse.y > ALTURA * 0.7 && evento.mouse.y < ALTURA * 0.7 + al_get_bitmap_height(caixa1)){
     al_draw_bitmap(caixa1, LARGURA * 0.3, ALTURA * 0.5,0);
@@ -185,7 +187,7 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel)
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "O");//Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "X");//Escrevendo a opção no Menu;
                     al_flip_display();
-                   cont =  cont+1;
+                   let3 = true;
                     }
     if(evento.mouse.x > LARGURA * 0.6 && evento.mouse.x < LARGURA * 0.6 + al_get_bitmap_width(caixa1) &&
     evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
@@ -210,10 +212,10 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel)
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "O");//Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "X");//Escrevendo a opção no Menu;
                     al_flip_display();
-                    cont = cont+1;
+                    let4 = true;
                     }
 
-            if(cont == 4){
+            if(let1 && let2 && let3 && let4){
                 al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
                 al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "Continuar");//Escrevendo a opção no Menu;
                 al_flip_display();
