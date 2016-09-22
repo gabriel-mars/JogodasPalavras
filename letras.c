@@ -257,6 +257,18 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
                     al_destroy_display(janela);
                     dado(FPS, ALTURA, LARGURA, pers_sel);
                 }
+
+                if(evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play) &&
+                evento.mouse.x > LARGURA * 0.35 && evento.mouse.x < LARGURA * 0.35 + al_get_bitmap_width(play)){
+                    al_destroy_display(janela);
+                    sapato(FPS, ALTURA, LARGURA, pers_sel);
+                }
+
+                if(evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play) &&
+                evento.mouse.x > LARGURA * 0.50 && evento.mouse.x < LARGURA * 0.50 + al_get_bitmap_width(play)){
+                    al_destroy_display(janela);
+                    escada(FPS, ALTURA, LARGURA, pers_sel);
+                }
             }
         }
 
