@@ -41,7 +41,7 @@ int personagens(int FPS, int LARGURA, int ALTURA){
     //Criação do display e seus elementos gráficos
     janela = al_create_display(LARGURA, ALTURA);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
-    pers1 = al_load_bitmap("Arte/pai.png");
+    pers1 = al_load_bitmap("Arte/Pai.png");
     pers2 = al_load_bitmap("Arte/Pers2.png");
     pers3 = al_load_bitmap("Arte/Pers3.png");
     pers4 = al_load_bitmap("Arte/Pers4.png");
@@ -130,29 +130,29 @@ int personagens(int FPS, int LARGURA, int ALTURA){
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
                     al_destroy_display(janela);
                    pers_sel  = pers1;
-
-                    palavras(FPS, ALTURA, LARGURA,pers_sel);
+                    letras(FPS, ALTURA, LARGURA, pers_sel);
+                    //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.3 && evento.mouse.x <= LARGURA * 0.3 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
                     al_destroy_display(janela);
                    pers_sel  = pers2;
-
-                    palavras(FPS, ALTURA, LARGURA,pers_sel);
+                    letras(FPS, ALTURA, LARGURA, pers_sel);
+                    //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.55 && evento.mouse.x <= LARGURA * 0.55 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
                     al_destroy_display(janela);
                    pers_sel  = pers3;
-
-                    palavras(FPS, ALTURA, LARGURA,pers_sel);
+                    letras(FPS, ALTURA, LARGURA, pers_sel);
+                    //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.80 && evento.mouse.x <= LARGURA * 0.80 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
                     al_destroy_display(janela);
                    pers_sel  = pers4;
-
-                    palavras(FPS, ALTURA, LARGURA,pers_sel);
+                    letras(FPS, ALTURA, LARGURA, pers_sel);
+                    //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
         }

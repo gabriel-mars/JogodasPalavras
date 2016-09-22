@@ -10,14 +10,11 @@
 #include "destruir.h"
 #include "fechaJanela.h"
 #include "Teste2Tela.c"
-#include "JogodasPalavras.c"
 #include "sobre.c"
 #include "instrucoes.c"
 #include "personagem.c"
 #include "letras.c"
-#include "barco.c"
-#include "casa.c"
-#include "dado.c"
+#include "palavras.c"
 
 //Definição de constantes
 const int ALTURA = 700;
