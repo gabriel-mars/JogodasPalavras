@@ -46,11 +46,13 @@ int destruir_palavras(int janela, int fila_eventos, int fonte, int pergunta, int
     return 0;
 }
 
-int destruir_letras(int janela, int fila_eventos, int fundo, int icone, int play, int play_sel, int fonte){
+int destruir_letras(int janela, int fila_eventos, int fundo, int icone, int play, int play_sel, int fonte, int play1, int play2){
     al_destroy_display(janela);
     al_destroy_bitmap(fundo);
     al_destroy_event_queue(fila_eventos);
     al_destroy_bitmap(play);
+    al_destroy_bitmap(play1);
+    al_destroy_bitmap(play2);
     al_destroy_bitmap(play_sel);
     al_destroy_bitmap(icone);
     al_destroy_font(fonte);
