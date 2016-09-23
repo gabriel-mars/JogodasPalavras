@@ -62,7 +62,7 @@ int main(void){
     play_sel = al_load_bitmap("Arte/barrinha_sel.png");
     fundo = al_load_bitmap("Arte/quadro.png");
     icone = al_load_bitmap("Arte/icone.png");
-    fonte = al_load_ttf_font("Arte/ColoredCrayons.ttf", 30, 0);
+    fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     musica = al_load_audio_stream("Arte/playback.ogg",4,1024);
     voz = al_load_sample("Narrador/jogar.ogg");
     voz1 = al_load_sample("Narrador/Instrucoes.ogg");

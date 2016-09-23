@@ -52,7 +52,7 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel)
     caixa1 = al_load_bitmap("Arte/caixa1.png");
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
-    fonte = al_load_ttf_font("Arte/ColoredCrayons.ttf", 30, 0);
+    fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
@@ -293,7 +293,7 @@ int rato(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/caixa1.png");
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
-    fonte = al_load_ttf_font("Arte/ColoredCrayons.ttf", 30, 0);
+    fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
@@ -535,7 +535,7 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/caixa1.png");
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
-    fonte = al_load_ttf_font("Arte/ColoredCrayons.ttf", 30, 0);
+    fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -773,7 +773,7 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/caixa1.png");
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3 = al_load_bitmap("Arte/caixa3.png");
-    fonte = al_load_ttf_font("Arte/ColoredCrayons.ttf", 30, 0);
+    fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
@@ -1037,7 +1037,7 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/caixa1.png");
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
-    fonte = al_load_ttf_font("Arte/ColoredCrayons.ttf", 30, 0);
+    fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
@@ -1622,7 +1622,7 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/caixa1.png");
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3 = al_load_bitmap("Arte/caixa3.png");
-    fonte = al_load_ttf_font("Arte/ColoredCrayons.ttf", 30, 0);
+    fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
@@ -1886,7 +1886,7 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/caixa1.png");
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
-    fonte = al_load_ttf_font("Arte/ColoredCrayons.ttf", 30, 0);
+    fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -2182,7 +2182,7 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/caixa1.png");
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
-    fonte = al_load_ttf_font("Arte/ColoredCrayons.ttf", 30, 0);
+    fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -2424,7 +2424,7 @@ int juiz(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/caixa1.png");
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
-    fonte = al_load_ttf_font("Arte/ColoredCrayons.ttf", 30, 0);
+    fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila

@@ -9,7 +9,9 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_BITMAP * play = NULL;
-    ALLEGRO_BITMAP * play_sel= NULL;
+    ALLEGRO_BITMAP * play_sel = NULL;
+    ALLEGRO_BITMAP * play1 = NULL;
+    ALLEGRO_BITMAP * play2 = NULL;
     ALLEGRO_FONT * fonte = NULL;
 
     bool aberto = true;
@@ -22,7 +24,9 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
         sel7 = false,
         sel8 = false,
         sel9 = false,
-        sel10 = false;
+        sel10 = false,
+        sel11 = false,
+        sel12 = false;
     double tempo_ini = 0,
            tempo_fin = 0;
 
@@ -38,6 +42,8 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
     icone = al_load_bitmap("Arte/icone.png");
     play = al_load_bitmap("Arte/caixa4.png");
     play_sel = al_load_bitmap("Arte/caixa2.png");
+    play1 = al_load_bitmap("Arte/barra.png");
+    play2 = al_load_bitmap("Arte/barra_sel.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
 
     al_register_event_source(fila_eventos, al_get_display_event_source(janela));
@@ -74,6 +80,14 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.58, 0, "E");
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.66, ALTURA * 0.58, 0, "R");
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.58, 0, "D");
+
+    al_flip_display();
+
+    al_draw_bitmap(play1, LARGURA * 0.8, ALTURA * 0.7,0);
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.71, 0, "Fim");//Escrevendo a opção no Menu;
+
+    al_draw_bitmap(play1, LARGURA * 0.8, ALTURA * 0.8,0);
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "Menu");//Escrevendo a opção no Menu;
 
     al_flip_display();
 
@@ -150,6 +164,18 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
                     }else{
                         sel10 = false;
                     }
+                }else if(evento.mouse.y > ALTURA * 0.7 && evento.mouse.y < ALTURA * 0.7 + al_get_bitmap_height(play1)){
+                        if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(play1)){
+                            sel11 = true;
+                        }else{
+                            sel11 = false;
+                        }
+                }else if(evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(play1)){
+                    if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(play1)){
+                            sel12 = true;
+                        }else{
+                            sel12 = false;
+                        }
                 }else{
                     sel1 = false;
                     sel2 = false;
@@ -161,6 +187,8 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
                     sel8 = false;
                     sel9 = false;
                     sel10 = false;
+                    sel11 = false;
+                    sel12 = false;
                 }
 
                 if(sel1){
@@ -233,6 +261,20 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
                     al_draw_bitmap(play, LARGURA * 0.80, ALTURA * 0.56, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.58, 0, "D");
                 }
+                if(sel11){
+                    al_draw_bitmap(play2, LARGURA * 0.8, ALTURA * 0.7, 0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.71, 0, "Fim");
+                }else{
+                    al_draw_bitmap(play1, LARGURA * 0.8, ALTURA * 0.7, 0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.71, 0, "Fim");
+                }
+                if(sel12){
+                    al_draw_bitmap(play2, LARGURA * 0.8, ALTURA * 0.8, 0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "Menu");
+                }else{
+                    al_draw_bitmap(play1, LARGURA * 0.8, ALTURA * 0.8, 0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "Menu");
+                }
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
                 if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&
                 evento.mouse.x > LARGURA * 0.20 && evento.mouse.x < LARGURA * 0.20 + al_get_bitmap_width(play)){
@@ -293,6 +335,18 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
                     al_destroy_display(janela);
                     galo(FPS, ALTURA, LARGURA, pers_sel);
                 }
+                /*
+                if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&
+                evento.mouse.x > LARGURA * 0.20 && evento.mouse.x < LARGURA * 0.20 + al_get_bitmap_width(play)){
+                    al_destroy_display(janela);
+                    fim();
+                }
+                */
+                if(evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(play1) &&
+                evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(play1)){
+                    al_destroy_display(janela);
+                    main();
+                }
             }
         }
 
@@ -305,7 +359,7 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
         al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
     }
 
-    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte);
+    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
 
     return 0;
 }
