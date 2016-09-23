@@ -41,9 +41,9 @@ int sobre(int FPS, int ALTURA, int LARGURA){
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     icone = al_load_bitmap("Arte/icone.png");
-        voz = al_load_sample("Narrador/sobre_tela.ogg");
-        voz1 = al_load_sample("Narrador/voltar_menu.ogg");
-        voz2 = al_load_sample("Narrador/sair.ogg");
+    voz = al_load_sample("Narrador/sobre_tela.ogg");
+    voz1 = al_load_sample("Narrador/voltar_menu.ogg");
+    voz2 = al_load_sample("Narrador/sair.ogg");
 
 
     //Adição do eventos na fila
@@ -54,13 +54,10 @@ int sobre(int FPS, int ALTURA, int LARGURA){
     al_set_system_mouse_cursor(janela, ALLEGRO_SYSTEM_MOUSE_CURSOR_DEFAULT);
     al_set_display_icon(janela, icone);
 
-    al_draw_bitmap(fundo, 0, 0, 0);
-
     //Primeiro desenho da página
     al_draw_bitmap(fundo, 0, 0, 0);
     al_draw_bitmap(play, LARGURA * 0.2, ALTURA * 0.76, 0);
     al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.76, 0);
-
 
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.21, ALTURA * 0.77, 0, "Menu");

@@ -15,6 +15,7 @@
 #include "personagem.c"
 #include "letras.c"
 #include "palavras.c"
+#include "final.c"
 
 //Definição de constantes
 const int ALTURA = 700;
