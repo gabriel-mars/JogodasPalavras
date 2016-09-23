@@ -4,7 +4,7 @@
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_ttf.h>
 
-int personagens(int FPS, int LARGURA, int ALTURA){
+int personagens(int FPS, int ALTURA, int LARGURA){
     //Inicialização das variáveis com Allegro
     ALLEGRO_DISPLAY * janela = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
@@ -50,9 +50,8 @@ int personagens(int FPS, int LARGURA, int ALTURA){
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     fonte = al_load_ttf_font("Arte/ColoredCrayons.ttf", 30, 0);
     icone = al_load_bitmap("Arte/icone.png");
-        //voz = al_load_sample("Narrador/inst_tela.ogg");
-        voz1 = al_load_sample("Narrador/voltar_menu.ogg");
-        voz2 = al_load_sample("Narrador/avancar.ogg");
+    voz1 = al_load_sample("Narrador/voltar_menu.ogg");
+    voz2 = al_load_sample("Narrador/avancar.ogg");
 
 
     //Adição do eventos na fila
@@ -77,9 +76,7 @@ int personagens(int FPS, int LARGURA, int ALTURA){
 
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.06, ALTURA * 0.77, 0, "Menu");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.2, 0, " Escolha teu personagem");
-
-
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.2, 0, "Escolha teu personagem");
 
     al_flip_display();
 
@@ -92,8 +89,6 @@ int personagens(int FPS, int LARGURA, int ALTURA){
             ALLEGRO_EVENT evento;
 
             al_wait_for_event(fila_eventos, &evento);
-
-
 
             if(evento.type == ALLEGRO_EVENT_DISPLAY_CLOSE){
                 fechaJanela(janela);
@@ -121,37 +116,36 @@ int personagens(int FPS, int LARGURA, int ALTURA){
                 }
                 }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
                 //Alterando as páginas com clique
-
                 if(evento.mouse.x >= LARGURA * 0.05 && evento.mouse.x <= LARGURA * 0.05 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.76 && evento.mouse.y <= ALTURA * 0.76 + al_get_bitmap_height(play)){
                     al_destroy_display(janela);
-                    main(FPS, ALTURA, LARGURA);
+                    main();
                 }if(evento.mouse.x >= LARGURA * 0.05 && evento.mouse.x <= LARGURA * 0.05 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
                     al_destroy_display(janela);
                    pers_sel  = pers1;
-                    letras(FPS, ALTURA, LARGURA, pers_sel);
+                    teste(FPS, ALTURA, LARGURA, pers_sel);
                     //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.3 && evento.mouse.x <= LARGURA * 0.3 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
                     al_destroy_display(janela);
                    pers_sel  = pers2;
-                    letras(FPS, ALTURA, LARGURA, pers_sel);
+                    teste(FPS, ALTURA, LARGURA, pers_sel);
                     //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.55 && evento.mouse.x <= LARGURA * 0.55 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
                     al_destroy_display(janela);
                    pers_sel  = pers3;
-                    letras(FPS, ALTURA, LARGURA, pers_sel);
+                    teste(FPS, ALTURA, LARGURA, pers_sel);
                     //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.80 && evento.mouse.x <= LARGURA * 0.80 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
                     al_destroy_display(janela);
                    pers_sel  = pers4;
-                    letras(FPS, ALTURA, LARGURA, pers_sel);
+                    teste(FPS, ALTURA, LARGURA, pers_sel);
                     //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }

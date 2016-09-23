@@ -14,7 +14,9 @@
 #include "instrucoes.c"
 #include "personagem.c"
 #include "letras.c"
+#include "letras2.c"
 #include "palavras.c"
+#include "palavras2.c"
 #include "final.c"
 
 //Definição de constantes
@@ -119,9 +121,6 @@ int main(void){
                 fechaJanela(janela);
             }else if(evento.type == ALLEGRO_EVENT_KEY_UP){ //Trocas de página de acordo com a tecla pressionada
                 switch(evento.keyboard.keycode){
-                    case ALLEGRO_KEY_1:
-                        teste(FPS, ALTURA, LARGURA);
-                    break;
                     case ALLEGRO_KEY_M:
                         desligar = true;
                     break;
@@ -187,7 +186,7 @@ int main(void){
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.66, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.68, 0, "Ajuda");//Escrevendo a opção no Menu;
-            }
+                }
 
                 if(sel3){
                     al_draw_bitmap(play_sel, LARGURA * 0.04, ALTURA * 0.76, 0);
@@ -203,17 +202,16 @@ int main(void){
                     al_draw_bitmap(play_sel, LARGURA * 0.04, ALTURA * 0.86, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.88, 0, "Sair");//Escrevendo a opção no Menu;
                     al_play_sample(voz3,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
-
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.86,0);//desenhar(play);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.88, 0, "Sair");//Escrevendo a opção no Menu;
                 }
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
-                //Batalhar
+                //Jogar
                 if(evento.mouse.x > LARGURA * 0.04 && evento.mouse.x < LARGURA * 0.04 + al_get_bitmap_width(play) &&
                     evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play)){
                     al_destroy_display(janela);
-                    teste(FPS, ALTURA, LARGURA);
+                    personagens(FPS, ALTURA, LARGURA);
                 }
 
                 //Sobre

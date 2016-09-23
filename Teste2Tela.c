@@ -5,7 +5,7 @@
 #include <allegro5/allegro_acodec.h>
 #include <allegro5/allegro_ttf.h>
 
-int teste(int FPS,int ALTURA,int LARGURA){
+int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
     //Inicialização das variáveis com Allegro
     ALLEGRO_DISPLAY * janela = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
@@ -54,6 +54,7 @@ int teste(int FPS,int ALTURA,int LARGURA){
 
     //Primeiro desenho da página
     al_draw_bitmap(fundo, 0, 0, 0);
+    al_draw_bitmap(pers_sel, LARGURA * 0.08, ALTURA * 0.6,0);
     al_draw_bitmap(play, LARGURA * 0.2, ALTURA * 0.4, 0);
     al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.4, 0);
 
@@ -134,12 +135,12 @@ int teste(int FPS,int ALTURA,int LARGURA){
                 if(evento.mouse.x >= LARGURA * 0.6 && evento.mouse.x <= LARGURA * 0.6 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.4 && evento.mouse.y <= ALTURA * 0.4 + al_get_bitmap_height(play)){
                     al_destroy_display(janela);
-                    personagens(FPS, LARGURA, ALTURA);
+                    letras2(FPS, ALTURA, LARGURA, pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.2 && evento.mouse.x <= LARGURA * 0.2 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.4 && evento.mouse.y <= ALTURA * 0.4 + al_get_bitmap_height(play)){
                     al_destroy_display(janela);
-                    personagens(FPS, LARGURA, ALTURA);
+                    letras(FPS, ALTURA, LARGURA, pers_sel);
                 }
             }
         }
