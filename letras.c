@@ -235,6 +235,12 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
                 }
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
                 if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&
+                evento.mouse.x > LARGURA * 0.20 && evento.mouse.x < LARGURA * 0.20 + al_get_bitmap_width(play)){
+                    al_destroy_display(janela);
+                    abelha(FPS, ALTURA, LARGURA, pers_sel);
+                }
+
+                if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&
                  evento.mouse.x > LARGURA * 0.35 && evento.mouse.x < LARGURA * 0.35 + al_get_bitmap_width(play)){
                     al_destroy_display(janela);
                     barco(FPS, ALTURA, LARGURA, pers_sel);
@@ -245,6 +251,18 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
                     al_destroy_display(janela);
                     casa(FPS, ALTURA, LARGURA, pers_sel);
                  }
+
+                if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&
+                evento.mouse.x > LARGURA * 0.65 && evento.mouse.x < LARGURA * 0.65 + al_get_bitmap_width(play)){
+                    al_destroy_display(janela);
+                    livro(FPS, ALTURA, LARGURA, pers_sel);
+                }
+
+                if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&
+                evento.mouse.x > LARGURA * 0.80 && evento.mouse.x < LARGURA * 0.80 + al_get_bitmap_width(play)){
+                    al_destroy_display(janela);
+                    juiz(FPS, ALTURA, LARGURA, pers_sel);
+                }
 
                 if(evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play) &&
                 evento.mouse.x > LARGURA * 0.65 && evento.mouse.x < LARGURA * 0.65 + al_get_bitmap_width(play)){
@@ -268,6 +286,12 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
                 evento.mouse.x > LARGURA * 0.50 && evento.mouse.x < LARGURA * 0.50 + al_get_bitmap_width(play)){
                     al_destroy_display(janela);
                     escada(FPS, ALTURA, LARGURA, pers_sel);
+                }
+
+                if(evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play) &&
+                evento.mouse.x > LARGURA * 0.20 && evento.mouse.x < LARGURA * 0.20 + al_get_bitmap_width(play)){
+                    al_destroy_display(janela);
+                    galo(FPS, ALTURA, LARGURA, pers_sel);
                 }
             }
         }
