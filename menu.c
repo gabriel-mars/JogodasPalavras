@@ -28,7 +28,10 @@ int main(void){
     //Inicialização das variáveis com Allegro
     ALLEGRO_DISPLAY * janela = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
+    ALLEGRO_BITMAP * abc = NULL;
+    ALLEGRO_BITMAP * crianca = NULL;
     ALLEGRO_BITMAP * play = NULL;
+    ALLEGRO_BITMAP * prof = NULL;
     ALLEGRO_BITMAP * play_sel= NULL;
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_BITMAP * icone = NULL;
@@ -38,6 +41,7 @@ int main(void){
     ALLEGRO_AUDIO_STREAM * voz2 = NULL;
     ALLEGRO_AUDIO_STREAM * voz3 = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
 
     //Declaração de variáveis
@@ -61,11 +65,15 @@ int main(void){
     //Criação do display e seus elementos gráficos
     janela = al_create_display(LARGURA, ALTURA);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
+    abc = al_load_bitmap("Arte/abc.png");
+    crianca = al_load_bitmap("Arte/crianca.png");
     play = al_load_bitmap("Arte/barrinha.png");
     play_sel = al_load_bitmap("Arte/barrinha_sel.png");
-    fundo = al_load_bitmap("Arte/quadro.png");
+    prof = al_load_bitmap("Arte/professor.png");
+    fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     icone = al_load_bitmap("Arte/icone.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/rayando.ttf", 80, 0);
     musica = al_load_audio_stream("Arte/playback.ogg",4,1024);
     voz = al_load_sample("Narrador/jogar.ogg");
     voz1 = al_load_sample("Narrador/Instrucoes.ogg");
@@ -91,12 +99,16 @@ int main(void){
     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.66, 0);
     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.76, 0);
     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.86, 0);
+    al_draw_bitmap(prof, LARGURA * 0.7, ALTURA * 0.45, 0);
+    al_draw_bitmap(abc, LARGURA * 0.45, ALTURA * 0.45, 0);
+    al_draw_bitmap(crianca, LARGURA * 0.25, ALTURA * 0.45, 0);
 
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.58, 0, "Jogar");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.68, 0, "Ajuda");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.78, 0, "Sobre");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.88, 0, "Sair");
+    al_draw_textf(fonte2, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.2, 0, "Jogo Das Palavras");
 
     al_flip_display();
 
