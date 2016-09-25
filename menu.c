@@ -74,7 +74,7 @@ int main(void){
     icone = al_load_bitmap("Arte/icone.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fonte2 = al_load_ttf_font("Arte/rayando.ttf", 80, 0);
-    musica = al_load_audio_stream("Arte/playback.ogg",4,1024);
+    musica = al_load_audio_stream("Narrador/playback.ogg",4,1024);
     voz = al_load_sample("Narrador/jogar.ogg");
     voz1 = al_load_sample("Narrador/Instrucoes.ogg");
     voz2 = al_load_sample("Narrador/sobre.ogg");
