@@ -5,7 +5,7 @@ Este projeto tem como objetivo o estudo e uso da linguagem de programação C ju
 
 A idéia principal do projeto é auxiliar crianças a escrever e a ler, além de uma breve introdução à informática.
 
-Nosso projeto é desenvolvido para ser multiplataforma, rodando em Windows (v8.1 e v10) e Linux (Ubuntu 16.04 e Mint 17.3).
+Nosso projeto é desenvolvido para ser multiplataforma, rodando em Windows (v8.1 e v10) e Linux Ubuntu 16.04 Xenial Xerus.
 
 ## Integrantes##
 ####Felipe
