@@ -91,7 +91,6 @@ int fim(int FPS, int ALTURA, int LARGURA, int pers_sel){
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
                 if(evento.mouse.x >= LARGURA * 0.6 && evento.mouse.x <= LARGURA * 0.6 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.76 && evento.mouse.y <= ALTURA * 0.76 + al_get_bitmap_height(play)){
-                    //fechaJanela(janela);
                     exit(0);
                 }
             }

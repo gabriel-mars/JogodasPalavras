@@ -42,8 +42,8 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     icone = al_load_bitmap("Arte/icone.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
-    voz1 = al_load_sample("Narrador/portugues.ogg");
-    voz2 = al_load_sample("Narrador/ingles.ogg");
+    voz1 = al_load_sample("Narrador/letras.ogg");
+    voz2 = al_load_sample("Narrador/imagens.ogg");
     //Adição do eventos na fila
     al_register_event_source(fila_eventos, al_get_display_event_source(janela));
     al_register_event_source(fila_eventos, al_get_keyboard_event_source());
@@ -96,6 +96,7 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
                         fechaJanela(janela);
                     break;
                 }
+                //Movimento do Mouse Para Narração
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_AXES){
                 if(evento.mouse.y > ALTURA* 0.4 && evento.mouse.y < ALTURA * 0.4 + al_get_bitmap_height(play)){
                     if(evento.mouse.x > LARGURA * 0.2 && evento.mouse.x < LARGURA * 0.2 + al_get_bitmap_width(play)){
@@ -148,6 +149,7 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
         }
         al_flip_display();
     }
+    //Calculo Para Controlar FPS
 
     tempo_fin = al_get_time() - tempo_ini;
 
