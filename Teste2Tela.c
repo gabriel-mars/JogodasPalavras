@@ -61,8 +61,8 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
 
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.21, ALTURA * 0.41, 0, "Letras");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.2, ALTURA * 0.2, 0, "Escolha letras para jogar selecionando as letras do nome da imagem");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.2, ALTURA * 0.25, 0, "Escolha imagens para jogar selecionando a imagem correta da palavra");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.2, ALTURA * 0.2, 0, "Combine as letras de acordo com a figura.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.2, ALTURA * 0.25, 0, "Escolha a imagem de acordo com a palavra.");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.41, 0, "Imagens");
 
 
