@@ -345,7 +345,7 @@ int letras2(int FPS, int ALTURA, int LARGURA, int pers_sel){
                 if(evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(play1) &&
                 evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(play1)){
                     al_destroy_display(janela);
-                    main();
+                    main(verifica);
                 }
             }
         }

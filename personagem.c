@@ -85,6 +85,8 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     while(aberto){  //Repetição para o display permanecer aberto
         tempo_ini = al_get_time();
 
+        verifica = 1;
+
         while(!al_is_event_queue_empty(fila_eventos)){
             ALLEGRO_EVENT evento;
 
@@ -123,7 +125,7 @@ int personagens(int FPS, int ALTURA, int LARGURA){
                 }if(evento.mouse.x >= LARGURA * 0.05 && evento.mouse.x <= LARGURA * 0.05 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
                     al_destroy_display(janela);
-                   pers_sel  = pers1;
+                    pers_sel  = pers1;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
                     //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }

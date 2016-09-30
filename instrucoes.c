@@ -82,6 +82,8 @@ int instrucoes(int FPS, int ALTURA, int LARGURA){
     while(aberto){  //Repetição para o display permanecer aberto
         tempo_ini = al_get_time();
 
+        verifica = 1;
+
         while(!al_is_event_queue_empty(fila_eventos)){
             ALLEGRO_EVENT evento;
 

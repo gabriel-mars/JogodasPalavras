@@ -5,7 +5,7 @@
 #include <allegro5/allegro_acodec.h>
 #include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_ttf.h>
-
+int verifica = 0;
 //Inclusão de módulos externos
 #include "destruir.h"
 #include "fechaJanela.h"
@@ -110,7 +110,7 @@ int main(void){
     while(aberto){  //Repetição para o display permanecer aberto
         tempo_ini = al_get_time();
 
-        if(!desligar){
+        if(verifica == 0){
             al_set_audio_stream_playing(musica, true); //Tocas música durante a execução
         }else{
             al_set_audio_stream_playing(musica, false); //Parar a música

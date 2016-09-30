@@ -7,8 +7,7 @@
 #include <allegro5/allegro_acodec.h>
 #include <allegro5/allegro_audio.h>
 
-int casa(int FPS,int ALTURA,int LARGURA,int pers_sel)
-{
+int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Inicialização das variáveis com Allegro
     ALLEGRO_DISPLAY * janela = NULL;
     ALLEGRO_BITMAP * fundo = NULL;
@@ -775,7 +774,6 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
     return 0;
 }
 
-
 int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Inicialização das variáveis com Allegro
     ALLEGRO_DISPLAY * janela = NULL;
@@ -1017,7 +1015,7 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         let5 = true;
                 }
 
-            if(let1 && let3 && let3 && let4 && let5){
+            if(let1 && let2 && let3 && let4 && let5){
                 al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
                 al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "Continuar");//Escrevendo a opção no Menu;
                 al_flip_display();
@@ -1324,7 +1322,7 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         let6 = true;
                 }
 
-                if(let1 && let3 && let3 && let4 && let5 && let6){
+                if(let1 && let2 && let3 && let4 && let5 && let6){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "Continuar");//Escrevendo a opção no Menu;
                     al_flip_display();
@@ -1630,7 +1628,7 @@ int escada(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         let6 = true;
                 }
 
-                if(let1 && let3 && let3 && let4 && let5 && let6){
+                if(let1 && let2 && let3 && let4 && let5 && let6){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "Continuar");//Escrevendo a opção no Menu;
                     al_flip_display();
@@ -1908,7 +1906,7 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         let5 = true;
                 }
 
-            if(let1 && let3 && let3 && let4 && let5){
+            if(let1 && let2 && let3 && let4 && let5){
                 al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
                 al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "Continuar");//Escrevendo a opção no Menu;
                 al_flip_display();
@@ -2213,7 +2211,7 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         let6 = true;
                 }
 
-                if(let1 && let3 && let3 && let4 && let5 && let6){
+                if(let1 && let2 && let3 && let4 && let5 && let6){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "Continuar");//Escrevendo a opção no Menu;
                     al_flip_display();
