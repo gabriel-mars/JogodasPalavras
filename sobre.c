@@ -3,6 +3,7 @@
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_ttf.h>
+#include <locale.h>
 
 int sobre(int FPS, int ALTURA, int LARGURA){
     //Inicialização das variáveis com Allegro
@@ -32,6 +33,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
     al_install_keyboard();
     al_init_font_addon(); //Instalação das fontes
     al_init_ttf_addon();
+    setlocale(LC_ALL, "Portuguese"); // Configurando caracteres especiais e acentuação
 
     //Criação do display e seus elementos gráficos
     janela = al_create_display(LARGURA, ALTURA);

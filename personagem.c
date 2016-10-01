@@ -76,7 +76,7 @@ int personagens(int FPS, int ALTURA, int LARGURA){
 
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.06, ALTURA * 0.77, 0, "Menu");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.2, 0, "Escolha teu personagem");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.2, 0, "Escolha seu personagem.");
 
     al_flip_display();
 

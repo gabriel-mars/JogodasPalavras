@@ -4,6 +4,8 @@
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_acodec.h>
 #include <allegro5/allegro_ttf.h>
+#include <locale.h>
+
 
 int fim(int FPS, int ALTURA, int LARGURA, int pers_sel){
     ALLEGRO_DISPLAY * janela = NULL;
@@ -27,6 +29,8 @@ int fim(int FPS, int ALTURA, int LARGURA, int pers_sel){
     al_install_audio(); //Instalação do audio
     al_init_font_addon(); //Instalação das fontes
     al_init_ttf_addon();
+    setlocale(LC_ALL, ""); // Configurando caracteres especiais e acentuação
+
 
     //Criação do display e seus elementos gráficos
     janela = al_create_display(LARGURA, ALTURA);
@@ -52,9 +56,8 @@ int fim(int FPS, int ALTURA, int LARGURA, int pers_sel){
     al_draw_bitmap(obrigado, LARGURA * 0.28, ALTURA * 0.1, 0);
 
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.77, 0, "Sair");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.30, ALTURA * 0.40, 0, "Agradecemos por jogar o nosso jogo!");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.30, ALTURA * 0.51, 0, "Esperamos que tenham gostado.");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.30, ALTURA * 0.62, 0, "Ate a proxima!");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.4, 0, "Agradecemos por jogar o nosso jogo!");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.5, 0, "Esperamos que tenham gostado.");
 
     al_flip_display();
 

@@ -3,6 +3,7 @@
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_ttf.h>
+#include <locale.h>
 
 int instrucoes(int FPS, int ALTURA, int LARGURA){
     //Inicialização das variáveis com Allegro
@@ -32,6 +33,8 @@ int instrucoes(int FPS, int ALTURA, int LARGURA){
     al_install_keyboard();
     al_init_font_addon(); //Instalação das fontes
     al_init_ttf_addon();
+    setlocale(LC_ALL, "Portuguese"); // Configurando caracteres especiais e acentuação
+
 
     //Criação do display e seus elementos gráficos
     janela = al_create_display(LARGURA, ALTURA);
@@ -65,13 +68,11 @@ int instrucoes(int FPS, int ALTURA, int LARGURA){
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.21, ALTURA * 0.77, 0, "Menu");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.77, 0, "Sair");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.1, 0, "No modo letras ");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.15, 0, "Passe o mouse sobre a imagem ");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.2, 0, "Sera narrado a palavra");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.25, 0, "Clique nas letras que formam a palavra");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.3, 0, "No modo imagem");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.35, 0, "Clique na imagem correta ");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.40, 0, "De acordo com a palavra da fase");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.1, 0, "No modo letras.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.15, 0, "Clique nas letras que formam o nome da imagem.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.20, 0, "Se precisar de ajuda clique no botão '?'.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.3, 0, "No modo imagem.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.35, 0, "Escolha a imagem de acordo com a palavra.");
 
 
     al_flip_display();

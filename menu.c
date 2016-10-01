@@ -5,6 +5,7 @@
 #include <allegro5/allegro_acodec.h>
 #include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_ttf.h>
+#include <locale.h>
 int verifica = 0;
 //Inclusão de módulos externos
 #include "destruir.h"
@@ -61,6 +62,8 @@ int main(void){
     al_install_keyboard();
     al_init_font_addon(); //Instalação das fontes
     al_init_ttf_addon();
+    setlocale(LC_ALL, "");
+
 
     //Criação do display e seus elementos gráficos
     janela = al_create_display(LARGURA, ALTURA);
@@ -98,7 +101,7 @@ int main(void){
 
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.58, 0, "Jogar");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.68, 0, "Ajuda");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.68, 0, "Instruções");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.78, 0, "Sobre");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.88, 0, "Sair");
 
@@ -184,12 +187,12 @@ int main(void){
                 }
                 if(sel2){
                     al_draw_bitmap(play_sel, LARGURA * 0.04, ALTURA * 0.66, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.68, 0, "Ajuda");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.68, 0, "Instruções");//Escrevendo a opção no Menu;
                     al_play_sample(voz1,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
 
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.66, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.68, 0, "Ajuda");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.68, 0, "Instruções");//Escrevendo a opção no Menu;
                 }
 
                 if(sel3){
