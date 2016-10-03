@@ -27,7 +27,6 @@ int casa2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false;
@@ -159,8 +158,6 @@ int rato2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     bool let1 =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
-    int cont;
-    cont = 0;
 
     //Inicialização das bibliotecas
     al_init();
@@ -285,7 +282,6 @@ int dado2(int FPS,int ALTURA,int LARGURA,int pers_sel){
 	//Declaração de variáveis
 	bool narrador = false;
 	bool aberto =  true;
-	bool sel =  false;
 	double tempo_ini = 0,
 		   tempo_fin = 0;
 	bool let1 = false;
@@ -415,7 +411,6 @@ int barco2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false;
@@ -545,7 +540,6 @@ int sapato2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false;
@@ -675,7 +669,6 @@ int escada2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false;
@@ -805,7 +798,6 @@ int livro2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false;
@@ -935,7 +927,6 @@ int abelha2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false;
@@ -1065,7 +1056,6 @@ int galo2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false;
@@ -1195,7 +1185,6 @@ int juiz2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false;

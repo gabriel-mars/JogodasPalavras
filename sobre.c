@@ -25,6 +25,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
          sel2 = false;
     double tempo_ini = 0,
            tempo_fin = 0;
+    int opcao = 0;
 
     //Inicialização das bibliotecas
     al_init();
@@ -64,10 +65,10 @@ int sobre(int FPS, int ALTURA, int LARGURA){
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.21, ALTURA * 0.77, 0, "Menu");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.77, 0, "Sair");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.2, 0, "Jogo das Palavras é um game educacional");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.25, 0, "Desenvolvido pelos alunos Felipe,Gabriel Ribeiro,Gabriel Rodrigo,Taises");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.30, 0, "Focado em auxiliar no processo de alfabetização");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.35, 0, "Utilizando uma metodologia simples e divertida");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.2, 0, "Jogo das Palavras é um jogo com objetivo educacional.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.25, 0, "Desenvolvido pelos alunos Felipe, Gabriel Ribeiro, Gabriel Rodrigo e Taises.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.30, 0, "O jogo é focado em auxiliar no processo de alfabetização.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.35, 0, "O Jogo das Palavras faz o uso de uma metodologia simples e divertida.");
 
 
     al_flip_display();
@@ -102,13 +103,18 @@ int sobre(int FPS, int ALTURA, int LARGURA){
                 }else{
                     sel1 = false;
                     sel2 = false;
+                    opcao = 0;
                 }
 
                 if(sel1){
                     al_draw_bitmap(play_sel, LARGURA * 0.2, ALTURA * 0.76, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.77, 0, "Menu");//Escrevendo a opção no Menu;
-                    al_play_sample(voz1,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
+
+                    if(opcao != 1){
+                        al_play_sample(voz1,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
+                        opcao = 1;
                     }
+                }
                 else{
                     al_draw_bitmap(play, LARGURA * 0.2, ALTURA * 0.76, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.77, 0, "Menu");//Escrevendo a opção no Menu;
@@ -117,8 +123,11 @@ int sobre(int FPS, int ALTURA, int LARGURA){
                 if(sel2){
                     al_draw_bitmap(play_sel, LARGURA * 0.6, ALTURA * 0.76, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.77, 0, "Sair");//Escrevendo a opção no Menu;
-                    al_play_sample(voz2,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
 
+                    if(opcao != 2){
+                        al_play_sample(voz2,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
+                        opcao = 2;
+                    }
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.76, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.77, 0, "Sair");//Escrevendo a opção no Menu;

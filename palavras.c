@@ -24,7 +24,6 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false;
@@ -231,7 +230,6 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
             }
             if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(caixa1) &&
                 evento.mouse.y > ALTURA * 0.7 && evento.mouse.y < ALTURA * 0.7 + al_get_bitmap_height(caixa1)){
-
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
@@ -239,8 +237,7 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
                   al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "Saia");//Escrevendo as dicas;
                   al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "Casa");//Escrevendo as dicas;
                   al_flip_display();
-
-                  }
+            }
 
             if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                 evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
@@ -285,8 +282,6 @@ int rato(int FPS,int ALTURA,int LARGURA,int pers_sel){
     bool let4=  false;
     double tempo_ini = 0,
            tempo_fin = 0;
-    int cont;
-    cont = 0;
 
     //Inicialização das bibliotecas
     al_init();
@@ -536,7 +531,6 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false;
@@ -791,7 +785,6 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false, let2 = false, let3 = false, let4 = false, let5 = false;
@@ -1069,7 +1062,6 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false, let2 = false, let3 = false, let4 = false, let5 = false, let6 = false;
@@ -1376,7 +1368,6 @@ int escada(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false, let2 = false, let3 = false, let4 = false, let5 = false, let6 = false;
@@ -1682,7 +1673,6 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false, let2 = false, let3 = false, let4 = false, let5 = false;
@@ -1960,7 +1950,6 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false, let2 = false, let3 = false, let4 = false, let5 = false, let6 = false;
@@ -2267,7 +2256,6 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false;
@@ -2523,7 +2511,6 @@ int juiz(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Declaração de variáveis
     bool narrador = false;
     bool aberto =  true;
-    bool sel =  false;
     double tempo_ini = 0,
            tempo_fin = 0;
     bool let1 = false;

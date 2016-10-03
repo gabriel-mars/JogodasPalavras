@@ -27,8 +27,9 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     bool sel1 = false;
     double tempo_ini = 0,
            tempo_fin = 0;
-     int * pers_selPtr;
-     int  pers_sel;
+    int * pers_selPtr;
+    int pers_sel;
+    int opcao = 0;
 
     //Inicialização das bibliotecas
     al_init();
@@ -104,13 +105,18 @@ int personagens(int FPS, int ALTURA, int LARGURA){
 
                 }else{
                     sel1 = false;
+                    opcao = 0;
                 }
 
                 if(sel1){
                     al_draw_bitmap(play_sel, LARGURA * 0.05, ALTURA * 0.76, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.06, ALTURA * 0.77, 0, "Menu");//Escrevendo a opção no Menu;
-                    al_play_sample(voz1,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
+
+                    if(opcao != 1){
+                        al_play_sample(voz1,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
+                        opcao = 1;
                     }
+                }
                 else{
                     al_draw_bitmap(play, LARGURA * 0.05, ALTURA * 0.76, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.06, ALTURA * 0.77, 0, "Menu");//Escrevendo a opção no Menu;
@@ -127,28 +133,24 @@ int personagens(int FPS, int ALTURA, int LARGURA){
                     al_destroy_display(janela);
                     pers_sel  = pers1;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
-                    //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.3 && evento.mouse.x <= LARGURA * 0.3 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
                     al_destroy_display(janela);
-                   pers_sel  = pers2;
+                    pers_sel  = pers2;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
-                    //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.55 && evento.mouse.x <= LARGURA * 0.55 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
                     al_destroy_display(janela);
-                   pers_sel  = pers3;
+                    pers_sel  = pers3;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
-                    //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.80 && evento.mouse.x <= LARGURA * 0.80 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
                     al_destroy_display(janela);
-                   pers_sel  = pers4;
+                    pers_sel  = pers4;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
-                    //palavras(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
         }
