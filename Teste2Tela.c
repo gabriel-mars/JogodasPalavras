@@ -45,6 +45,7 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     voz1 = al_load_sample("Narrador/letras.ogg");
     voz2 = al_load_sample("Narrador/imagens.ogg");
+
     //Adição do eventos na fila
     al_register_event_source(fila_eventos, al_get_display_event_source(janela));
     al_register_event_source(fila_eventos, al_get_keyboard_event_source());
@@ -59,13 +60,11 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
     al_draw_bitmap(play, LARGURA * 0.2, ALTURA * 0.4, 0);
     al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.4, 0);
 
-
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.21, ALTURA * 0.41, 0, "Letras");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.2, ALTURA * 0.2, 0, "Combine as letras de acordo com a figura.");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.2, ALTURA * 0.25, 0, "Escolha a imagem de acordo com a palavra.");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.41, 0, "Imagens");
-
 
     al_flip_display();
 
@@ -145,12 +144,12 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
                 //Alterando as páginas com clique
                 if(evento.mouse.x >= LARGURA * 0.6 && evento.mouse.x <= LARGURA * 0.6 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.4 && evento.mouse.y <= ALTURA * 0.4 + al_get_bitmap_height(play)){
-                    al_destroy_display(janela);
+                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     letras2(FPS, ALTURA, LARGURA, pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.2 && evento.mouse.x <= LARGURA * 0.2 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.4 && evento.mouse.y <= ALTURA * 0.4 + al_get_bitmap_height(play)){
-                    al_destroy_display(janela);
+                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     letras(FPS, ALTURA, LARGURA, pers_sel);
                 }
             }

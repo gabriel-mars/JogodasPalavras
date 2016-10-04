@@ -140,7 +140,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
                 }
                 if(evento.mouse.x >= LARGURA * 0.2 && evento.mouse.x <= LARGURA * 0.2 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.76 && evento.mouse.y <= ALTURA * 0.76 + al_get_bitmap_height(play)){
-                    al_destroy_display(janela);
+                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     main();
                 }
             }

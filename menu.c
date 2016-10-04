@@ -42,8 +42,6 @@ int main(void){
     ALLEGRO_AUDIO_STREAM * voz2 = NULL;
     ALLEGRO_AUDIO_STREAM * voz3 = NULL;
     ALLEGRO_FONT * fonte = NULL;
-    ALLEGRO_FONT * fonte2 = NULL;
-
 
     //Declaração de variáveis
     bool aberto = true;
@@ -235,20 +233,21 @@ int main(void){
                 //Jogar
                 if(evento.mouse.x > LARGURA * 0.04 && evento.mouse.x < LARGURA * 0.04 + al_get_bitmap_width(play) &&
                     evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play)){
-                    al_destroy_display(janela);
+                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     personagens(FPS, ALTURA, LARGURA);
                 }
 
                 //Sobre
                 if(evento.mouse.x > LARGURA * 0.04 && evento.mouse.x < LARGURA * 0.04 + al_get_bitmap_width(play) &&
                     evento.mouse.y > ALTURA * 0.76 && evento.mouse.y < ALTURA * 0.76 + al_get_bitmap_height(play)){
-                    al_destroy_display(janela);
+                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     sobre(FPS, ALTURA, LARGURA);
                 }
                 //Instruções
                 if(evento.mouse.x > LARGURA * 0.04 && evento.mouse.x < LARGURA * 0.04 + al_get_bitmap_width(play) &&
                     evento.mouse.y > ALTURA * 0.66 && evento.mouse.y < ALTURA * 0.66 + al_get_bitmap_height(play)){
-                    al_destroy_display(janela);
+                    //al_destroy_display(janela);
+                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     instrucoes(FPS, ALTURA, LARGURA);
                 }
 

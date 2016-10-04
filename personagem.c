@@ -17,10 +17,8 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_BITMAP * icone = NULL;
-//    ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_AUDIO_STREAM * voz1 = NULL;
     ALLEGRO_AUDIO_STREAM * voz2 = NULL;
-
 
     //Declaração de variáveis
     bool aberto = true;
@@ -54,7 +52,6 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     voz1 = al_load_sample("Narrador/voltar_menu.ogg");
     voz2 = al_load_sample("Narrador/avancar.ogg");
 
-
     //Adição do eventos na fila
     al_register_event_source(fila_eventos, al_get_display_event_source(janela));
     al_register_event_source(fila_eventos, al_get_keyboard_event_source());
@@ -72,8 +69,6 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     al_draw_bitmap(pers2, LARGURA * 0.30, ALTURA * 0.36, 0);
     al_draw_bitmap(pers3, LARGURA * 0.55, ALTURA * 0.36, 0);
     al_draw_bitmap(pers4, LARGURA * 0.80, ALTURA * 0.36, 0);
-
-
 
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.06, ALTURA * 0.77, 0, "Menu");
@@ -122,39 +117,38 @@ int personagens(int FPS, int ALTURA, int LARGURA){
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.06, ALTURA * 0.77, 0, "Menu");//Escrevendo a opção no Menu;
 
                 }
-                }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
+            }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
                 //Alterando as páginas com clique
                 if(evento.mouse.x >= LARGURA * 0.05 && evento.mouse.x <= LARGURA * 0.05 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.76 && evento.mouse.y <= ALTURA * 0.76 + al_get_bitmap_height(play)){
-                    al_destroy_display(janela);
+                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     main();
                 }if(evento.mouse.x >= LARGURA * 0.05 && evento.mouse.x <= LARGURA * 0.05 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
-                    al_destroy_display(janela);
+                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     pers_sel  = pers1;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.3 && evento.mouse.x <= LARGURA * 0.3 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
-                    al_destroy_display(janela);
+                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     pers_sel  = pers2;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.55 && evento.mouse.x <= LARGURA * 0.55 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
-                    al_destroy_display(janela);
+                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     pers_sel  = pers3;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
                 }
                 if(evento.mouse.x >= LARGURA * 0.80 && evento.mouse.x <= LARGURA * 0.80 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
-                    al_destroy_display(janela);
+                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     pers_sel  = pers4;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
                 }
             }
         }
-
 
         al_flip_display();
     }
@@ -164,7 +158,6 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     if(tempo_fin < 1.0 / FPS){
         al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
     }
-
 
     destruir_sobre(janela, fundo, fila_eventos, play, play_sel, fonte, icone);
 
