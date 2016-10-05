@@ -84,10 +84,10 @@ int letras2(int FPS, int ALTURA, int LARGURA, int pers_sel){
     al_flip_display();
 
     al_draw_bitmap(play1, LARGURA * 0.8, ALTURA * 0.7,0);
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.71, 0, "Fim");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.71, 0, "FIM");//Escrevendo a opção no Menu;
 
     al_draw_bitmap(play1, LARGURA * 0.8, ALTURA * 0.8,0);
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "Menu");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "MENU");//Escrevendo a opção no Menu;
 
     al_flip_display();
 
@@ -263,17 +263,17 @@ int letras2(int FPS, int ALTURA, int LARGURA, int pers_sel){
                 }
                 if(sel11){
                     al_draw_bitmap(play2, LARGURA * 0.8, ALTURA * 0.7, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.71, 0, "Fim");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.71, 0, "FIM");
                 }else{
                     al_draw_bitmap(play1, LARGURA * 0.8, ALTURA * 0.7, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.71, 0, "Fim");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.71, 0, "FIM");
                 }
                 if(sel12){
                     al_draw_bitmap(play2, LARGURA * 0.8, ALTURA * 0.8, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "Menu");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "MENU");
                 }else{
                     al_draw_bitmap(play1, LARGURA * 0.8, ALTURA * 0.8, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "Menu");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.81, 0, "MENU");
                 }
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
                 if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&

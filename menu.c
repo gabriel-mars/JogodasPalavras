@@ -6,7 +6,10 @@
 #include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_ttf.h>
 #include <locale.h>
+
+//Variável que controla o início do toque de fundo
 int verifica = 0;
+
 //Inclusão de módulos externos
 #include "destruir.h"
 #include "fechaJanela.h"
@@ -77,7 +80,6 @@ int main(void){
     voz1 = al_load_sample("Narrador/Instrucoes.ogg");
     voz2 = al_load_sample("Narrador/sobre.ogg");
     voz3 = al_load_sample("Narrador/sair.ogg");
-
 
     //Adição do eventos na fila
     al_register_event_source(fila_eventos, al_get_display_event_source(janela));
@@ -246,7 +248,6 @@ int main(void){
                 //Instruções
                 if(evento.mouse.x > LARGURA * 0.04 && evento.mouse.x < LARGURA * 0.04 + al_get_bitmap_width(play) &&
                     evento.mouse.y > ALTURA * 0.66 && evento.mouse.y < ALTURA * 0.66 + al_get_bitmap_height(play)){
-                    //al_destroy_display(janela);
                     destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     instrucoes(FPS, ALTURA, LARGURA);
                 }

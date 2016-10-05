@@ -156,7 +156,7 @@ int instrucoes(int FPS, int ALTURA, int LARGURA){
         al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
     }
 
-    destruir_sobre(janela, fundo, fila_eventos, play, play_sel, fonte, icone);
+    destruir_instrucoes(janela, fundo, fila_eventos, play, play_sel, fonte, icone, voz, voz1, voz2);
 
     return 0;
 }

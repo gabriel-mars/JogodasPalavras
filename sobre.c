@@ -13,6 +13,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
     ALLEGRO_BITMAP * play_sel= NULL;
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_AUDIO_STREAM * voz1 = NULL;
@@ -43,6 +44,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
     play_sel = al_load_bitmap("Arte/barrinha_sel.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     icone = al_load_bitmap("Arte/icone.png");
     voz = al_load_sample("Narrador/sobre_tela.ogg");
     voz1 = al_load_sample("Narrador/voltar_menu.ogg");
@@ -63,8 +65,8 @@ int sobre(int FPS, int ALTURA, int LARGURA){
     al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.76, 0);
 
     //Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.21, ALTURA * 0.77, 0, "MENU");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.77, 0, "SAIR");
+    al_draw_textf(fonte2, al_map_rgb(255, 255,255), LARGURA * 0.21, ALTURA * 0.77, 0, "MENU");
+    al_draw_textf(fonte2, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.77, 0, "SAIR");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.2, 0, "JOGO DAS PALAVRAS É UM JOGO COM OBJETIVO EDUCACIONAL.");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.25, 0, "DESENVOLVIDO PELOS ALUNOS FELIPE, GABRIEL RIBEIRO, GABRIEL RODRIGO E TAISES.");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.30, 0, "O JOGO É FOCADO EM AUXILIAR NO PROCESSO DE ALFABETIZAÇÃO.");
@@ -107,7 +109,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
 
                 if(sel1){
                     al_draw_bitmap(play_sel, LARGURA * 0.2, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.77, 0, "MENU");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.77, 0, "MENU");//Escrevendo a opção no Menu;
 
                     if(opcao != 1){
                         al_play_sample(voz1,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
@@ -116,12 +118,12 @@ int sobre(int FPS, int ALTURA, int LARGURA){
                 }
                 else{
                     al_draw_bitmap(play, LARGURA * 0.2, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.77, 0, "MENU");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.77, 0, "MENU");//Escrevendo a opção no Menu;
 
                 }
                 if(sel2){
                     al_draw_bitmap(play_sel, LARGURA * 0.6, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.77, 0, "SAIR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.77, 0, "SAIR");//Escrevendo a opção no Menu;
 
                     if(opcao != 2){
                         al_play_sample(voz2,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
@@ -129,7 +131,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
                     }
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.77, 0, "SAIR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.77, 0, "SAIR");//Escrevendo a opção no Menu;
                 }
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
                 //Alterando as páginas com clique
@@ -153,7 +155,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
         al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
     }
 
-    destruir_sobre(janela, fundo, fila_eventos, play, play_sel, fonte, icone);
+    destruir_sobre(janela, fundo, fila_eventos, play, play_sel, fonte, icone, fonte2);
 
     return 0;
 }

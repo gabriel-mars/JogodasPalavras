@@ -159,7 +159,7 @@ int personagens(int FPS, int ALTURA, int LARGURA){
         al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
     }
 
-    destruir_sobre(janela, fundo, fila_eventos, play, play_sel, fonte, icone);
+    int destruir_personagens(janela, fila_eventos, pers1, pers2, pers3, play, play_sel, fundo, fonte, icone, voz1, voz2);
 
     return 0;
 }
