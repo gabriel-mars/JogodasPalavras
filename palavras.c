@@ -225,7 +225,7 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(let1 && let2 && let3 && let4){
                 al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.8, ALTURA * 0.81, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");//Escrevendo a opção no Menu;
                 al_flip_display();
             }
             if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(caixa1) &&
@@ -477,7 +477,7 @@ int rato(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(let1 && let2 && let3 && let4){
                 al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.8, ALTURA * 0.81, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
                 al_flip_display();
             }
 
@@ -732,7 +732,7 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1 && let2 && let3 && let4){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.8, ALTURA * 0.81, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(caixa1) &&
@@ -1010,7 +1010,7 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(let1 && let2 && let3 && let4 && let5){
                 al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.8, ALTURA * 0.81, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
                 al_flip_display();
             }
 
@@ -1316,7 +1316,7 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1 && let2 && let3 && let4 && let5 && let6){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.8, ALTURA * 0.81, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -1621,7 +1621,7 @@ int escada(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1 && let2 && let3 && let4 && let5 && let6){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.8, ALTURA * 0.81, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -1898,7 +1898,7 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(let1 && let2 && let3 && let4 && let5){
                 al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.8, ALTURA * 0.81, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
                 al_flip_display();
             }
 
@@ -2132,7 +2132,7 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_bitmap(caixa1, LARGURA * 0.6, ALTURA * 0.7,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.7, ALTURA * 0.7,0);
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.501, 0, "B");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.501, 0, "R");//Escrevendo a opção no Menu;
+               al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.501, 0, "R");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.501, 0, "L");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.501, 0, "I");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "A");//Escrevendo a opção no Menu;
@@ -2202,7 +2202,7 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1 && let2 && let3 && let4 && let5 && let6){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.8, ALTURA * 0.81, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -2457,7 +2457,7 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1 && let2 && let3 && let4){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.8, ALTURA * 0.81, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -2712,7 +2712,7 @@ int juiz(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1 && let2 && let3 && let4){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.8, ALTURA * 0.81, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
