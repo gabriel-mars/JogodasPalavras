@@ -42,7 +42,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
     play = al_load_bitmap("Arte/barrinha.png");
     play_sel = al_load_bitmap("Arte/barrinha_sel.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
-    fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     icone = al_load_bitmap("Arte/icone.png");
     voz = al_load_sample("Narrador/sobre_tela.ogg");
     voz1 = al_load_sample("Narrador/voltar_menu.ogg");
@@ -63,13 +63,12 @@ int sobre(int FPS, int ALTURA, int LARGURA){
     al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.76, 0);
 
     //Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.21, ALTURA * 0.77, 0, "Menu");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.77, 0, "Sair");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.2, 0, "Jogo das Palavras é um jogo com objetivo educacional.");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.25, 0, "Desenvolvido pelos alunos Felipe, Gabriel Ribeiro, Gabriel Rodrigo e Taises.");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.30, 0, "O jogo é focado em auxiliar no processo de alfabetização.");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.35, 0, "O Jogo das Palavras faz o uso de uma metodologia simples e divertida.");
-
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.21, ALTURA * 0.77, 0, "MENU");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.77, 0, "SAIR");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.2, 0, "JOGO DAS PALAVRAS É UM JOGO COM OBJETIVO EDUCACIONAL.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.25, 0, "DESENVOLVIDO PELOS ALUNOS FELIPE, GABRIEL RIBEIRO, GABRIEL RODRIGO E TAISES.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.30, 0, "O JOGO É FOCADO EM AUXILIAR NO PROCESSO DE ALFABETIZAÇÃO.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.35, 0, "O JOGO FAZ O USO DE UMA METODOLOGIA SIMPLES E DIVERTIDA.");
 
     al_flip_display();
     al_play_sample(voz,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
@@ -108,7 +107,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
 
                 if(sel1){
                     al_draw_bitmap(play_sel, LARGURA * 0.2, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.77, 0, "Menu");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.77, 0, "MENU");//Escrevendo a opção no Menu;
 
                     if(opcao != 1){
                         al_play_sample(voz1,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
@@ -117,12 +116,12 @@ int sobre(int FPS, int ALTURA, int LARGURA){
                 }
                 else{
                     al_draw_bitmap(play, LARGURA * 0.2, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.77, 0, "Menu");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.77, 0, "MENU");//Escrevendo a opção no Menu;
 
                 }
                 if(sel2){
                     al_draw_bitmap(play_sel, LARGURA * 0.6, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.77, 0, "Sair");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.77, 0, "SAIR");//Escrevendo a opção no Menu;
 
                     if(opcao != 2){
                         al_play_sample(voz2,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
@@ -130,7 +129,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
                     }
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.77, 0, "Sair");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.77, 0, "SAIR");//Escrevendo a opção no Menu;
                 }
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
                 //Alterando as páginas com clique
