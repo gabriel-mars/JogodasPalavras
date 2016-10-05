@@ -57,14 +57,14 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
     //Primeiro desenho da página
     al_draw_bitmap(fundo, 0, 0, 0);
     al_draw_bitmap(pers_sel, LARGURA * 0.08, ALTURA * 0.6,0);
-    al_draw_bitmap(play, LARGURA * 0.2, ALTURA * 0.4, 0);
-    al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.4, 0);
+    al_draw_bitmap(play, LARGURA * 0.42, ALTURA * 0.25, 0);
+    al_draw_bitmap(play, LARGURA * 0.42, ALTURA * 0.5, 0);
 
     //Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.2, ALTURA * 0.2, 0, "COMBINE AS LETRAS DE ACORDO COM A FIGURA.");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.2, ALTURA * 0.3, 0, "ESCOLHA A IMAGEM DE ACORDO COM A PALAVRA.");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.43, 0, "IMAGENS");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.21, ALTURA * 0.43, 0, "LETRAS");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.25, ALTURA * 0.15, 0, "COMBINE AS LETRAS DE ACORDO COM A FIGURA.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.43, ALTURA * 0.27, 0, "LETRAS");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.25, ALTURA * 0.4, 0, "ESCOLHA A IMAGEM DE ACORDO COM A PALAVRA.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.43, ALTURA * 0.52, 0, "IMAGENS");
 
     al_flip_display();
 
@@ -98,13 +98,13 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
                 }
                 //Movimento do Mouse Para Narração
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_AXES){
-                if(evento.mouse.y > ALTURA* 0.4 && evento.mouse.y < ALTURA * 0.4 + al_get_bitmap_height(play)){
-                    if(evento.mouse.x > LARGURA * 0.2 && evento.mouse.x < LARGURA * 0.2 + al_get_bitmap_width(play)){
+                if(evento.mouse.x > LARGURA * 0.42 && evento.mouse.x < LARGURA * 0.42 + al_get_bitmap_width(play)){
+                    if(evento.mouse.y > ALTURA * 0.25 && evento.mouse.y < ALTURA * 0.25 + al_get_bitmap_height(play)){
                         sel1 = true;
                     }else{
                         sel1 = false;
                     }
-                    if(evento.mouse.x > LARGURA * 0.6 && evento.mouse.x < LARGURA * 0.6 + al_get_bitmap_width(play)){
+                    if(evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(play)){
                         sel2 = true;
                     }else{
                         sel2 = false;
@@ -116,8 +116,8 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
                 }
 
                 if(sel1){
-                    al_draw_bitmap(play_sel, LARGURA * 0.2, ALTURA * 0.4, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.43, 0, "LETRAS");//Escrevendo a opção no Menu;
+                    al_draw_bitmap(play_sel, LARGURA * 0.42, ALTURA * 0.25, 0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.43, ALTURA * 0.27, 0, "LETRAS");//Escrevendo a opção no Menu;
 
                     if(opcao != 1){
                         al_play_sample(voz1,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
@@ -125,32 +125,33 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
                     }
                 }
                 else{
-                    al_draw_bitmap(play, LARGURA * 0.2, ALTURA * 0.4, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.43, 0, "LETRAS");//Escrevendo a opção no Menu;
+                    al_draw_bitmap(play, LARGURA * 0.42, ALTURA * 0.25, 0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.43, ALTURA * 0.27, 0, "LETRAS");//Escrevendo a opção no Menu;
                 }
+
                 if(sel2){
-                    al_draw_bitmap(play_sel, LARGURA * 0.6, ALTURA * 0.4, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.43, 0, "IMAGENS");//Escrevendo a opção no Menu;
+                    al_draw_bitmap(play_sel, LARGURA * 0.42, ALTURA * 0.5, 0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.43, ALTURA * 0.52, 0, "IMAGENS");//Escrevendo a opção no Menu;
 
                     if(opcao != 2){
                         al_play_sample(voz2,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
                         opcao = 2;
                     }
                 }else{
-                    al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.4, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.43, 0, "IMAGENS");//Escrevendo a opção no Menu;
+                    al_draw_bitmap(play, LARGURA * 0.42, ALTURA * 0.5, 0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.43, ALTURA * 0.52, 0, "IMAGENS");//Escrevendo a opção no Menu;
                 }
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
                 //Alterando as páginas com clique
-                if(evento.mouse.x >= LARGURA * 0.6 && evento.mouse.x <= LARGURA * 0.6 + al_get_bitmap_width(play) &&
-                    evento.mouse.y >= ALTURA * 0.4 && evento.mouse.y <= ALTURA * 0.4 + al_get_bitmap_height(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
-                    letras2(FPS, ALTURA, LARGURA, pers_sel);
-                }
-                if(evento.mouse.x >= LARGURA * 0.2 && evento.mouse.x <= LARGURA * 0.2 + al_get_bitmap_width(play) &&
-                    evento.mouse.y >= ALTURA * 0.4 && evento.mouse.y <= ALTURA * 0.4 + al_get_bitmap_height(play)){
+                if(evento.mouse.x >= LARGURA * 0.42 && evento.mouse.x <= LARGURA * 0.42 + al_get_bitmap_width(play) &&
+                    evento.mouse.y >= ALTURA * 0.25 && evento.mouse.y <= ALTURA * 0.25 + al_get_bitmap_height(play)){
                     destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     letras(FPS, ALTURA, LARGURA, pers_sel);
+                }
+                if(evento.mouse.x >= LARGURA * 0.42 && evento.mouse.x <= LARGURA * 0.42 + al_get_bitmap_width(play) &&
+                    evento.mouse.y >= ALTURA * 0.5 && evento.mouse.y <= ALTURA * 0.5 + al_get_bitmap_height(play)){
+                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    letras2(FPS, ALTURA, LARGURA, pers_sel);
                 }
             }
         }
