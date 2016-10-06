@@ -13,6 +13,14 @@ Nosso projeto é desenvolvido para ser multiplataforma, rodando em Windows (v8.1
 ####Gabriel Rodrigo
 ####Taises
 
+
 # Importante #
 #### Windows Only ####
 Para evitar o problema com a DLL allegro-5.0.10-monolith-mt.dll, cole a mesma dentro da pasta do projeto, junto com os arquivos .c.
+
+
+## Ponto Adicional ##
+
+O arquivo 'Registro.c' não é uma parte do jogo, mas é simplesmente um arquivo para cadastrar os alunos (participantes) do nosso jogo durante a apresentação na feira.
+
+Sendo assim, não precisa ser compilado juntamente com o jogo.
