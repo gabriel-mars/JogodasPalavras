@@ -65,16 +65,16 @@ int casa3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     al_draw_bitmap(fundo,0,0,0);
     al_draw_bitmap(pers_sel, LARGURA * 0.08, ALTURA * 0.6,0);
     al_draw_bitmap(pergunta, LARGURA * 0.4, ALTURA * 0.2,0);
-    al_draw_bitmap(caixa1, LARGURA * 0.3, ALTURA * 0.5,0);
-    al_draw_bitmap(caixa1, LARGURA * 0.4, ALTURA * 0.5,0);
-    al_draw_bitmap(caixa1, LARGURA * 0.5, ALTURA * 0.5,0);
-    al_draw_bitmap(caixa1, LARGURA * 0.6, ALTURA * 0.5,0);
+    al_draw_bitmap(caixa1, LARGURA * 0.12, ALTURA * 0.5,0);
+    al_draw_bitmap(caixa1, LARGURA * 0.32, ALTURA * 0.5,0);
+    al_draw_bitmap(caixa1, LARGURA * 0.52, ALTURA * 0.5,0);
+    al_draw_bitmap(caixa1, LARGURA * 0.72, ALTURA * 0.5,0);
 
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.35, ALTURA * 0.06, 0, "CLIQUE NO MEU NOME:");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.501, 0, "CAVA");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.501, 0, "SALA");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.501, 0, "CASA");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.501, 0, "CERA");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.13, ALTURA * 0.506, 0, "BALA");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.33, ALTURA * 0.506, 0, "SALA");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.53, ALTURA * 0.506, 0, "CASA");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.73, ALTURA * 0.506, 0, "CERA");//Escrevendo a opção no Menu;
     al_flip_display();
 
     al_set_window_title(janela, "Jogo das Palavras");
@@ -99,17 +99,17 @@ int casa3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
                 //Batalhar
-                if(evento.mouse.x > LARGURA * 0.5 && evento.mouse.x < LARGURA * 0.5 + al_get_bitmap_width(caixa1) &&
+                if(evento.mouse.x > LARGURA * 0.55 && evento.mouse.x < LARGURA * 0.55 + al_get_bitmap_width(caixa1) &&
                     evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
-                        al_draw_bitmap(caixa1, LARGURA * 0.3, ALTURA * 0.5,0);
-                        al_draw_bitmap(caixa1, LARGURA * 0.4, ALTURA * 0.5,0);
-                        al_draw_bitmap(caixa3, LARGURA * 0.5, ALTURA * 0.5,0);
-                        al_draw_bitmap(caixa1, LARGURA * 0.6, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.12, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.32, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa3, LARGURA * 0.52, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.72, ALTURA * 0.5,0);
 
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.501, 0, "CAVA");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.501, 0, "SALA");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.501, 0, "CASA");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.501, 0, "CERA");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.13, ALTURA * 0.506, 0, "BALA");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.33, ALTURA * 0.506, 0, "SALA");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.53, ALTURA * 0.506, 0, "CASA");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.73, ALTURA * 0.506, 0, "CERA");//Escrevendo a opção no Menu;
 
 
                         al_flip_display();
