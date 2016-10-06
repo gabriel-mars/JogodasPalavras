@@ -19,8 +19,10 @@ int verifica = 0;
 #include "personagem.c"
 #include "letras.c"
 #include "letras2.c"
+#include "letras3.c"
 #include "palavras.c"
 #include "palavras2.c"
+#include "palavras3.c"
 #include "final.c"
 
 //Definição de constantes
