@@ -20,23 +20,23 @@ int main(void){
         printf("\n---------- Cadastro de Jogadores -----------\n\n");
         //Repetição para cadastro de alunos
         printf("Informe o nome: ");
-        __fpurge(stdin);
         scanf ( "%[^\n]", &aluno.nome);
+        __fpurge(stdin);
         //gets(aluno.nome);
 
         printf("Informe a escola: ");
-        __fpurge(stdin);
         scanf ( "%[^\n]", &aluno.escola);
+        __fpurge(stdin);
         //gets(aluno.escola);
 
         printf("Informe a idade: ");
-        __fpurge(stdin);
         scanf("%i", &aluno.idade);
+        __fpurge(stdin);
 
         printf("Jogaria em sua escola?");
         printf("\nS - Sim / N - Não ");
-        __fpurge(stdin);
         scanf("%c", &aluno.jogaria);
+        __fpurge(stdin);
 
         //Grava a struct em um arquivo
         fp = fopen("alunos.txt", "a");
