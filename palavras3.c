@@ -39,8 +39,6 @@ int casa3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     al_init_ttf_addon();
     setlocale(LC_ALL, "");
 
-
-
     janela =  al_create_display(LARGURA, ALTURA);
     pergunta = al_load_bitmap("Arte/casa.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
@@ -98,7 +96,7 @@ int casa3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
                 //Batalhar
-                if(evento.mouse.x > LARGURA * 0.55 && evento.mouse.x < LARGURA * 0.55 + al_get_bitmap_width(caixa1) &&
+                if(evento.mouse.x > LARGURA * 0.52 && evento.mouse.x < LARGURA * 0.52 + al_get_bitmap_width(caixa1) &&
                     evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
                         al_draw_bitmap(caixa1, LARGURA * 0.12, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.32, ALTURA * 0.5,0);
@@ -114,28 +112,26 @@ int casa3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         let1 = true;
                     }
 
+                    if(let1){
+                        al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                        al_flip_display();
+                    }
 
+                    if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
+                        evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
+                            al_destroy_display(janela);
+                            letras3(FPS, ALTURA, LARGURA,pers_sel);
+                    }
+                }
 
-            if(let1){
-                al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");//Escrevendo a opção no Menu;
-                al_flip_display();
+            tempo_fin = al_get_time() - tempo_ini;
+
+            if(tempo_fin < 1.0 / FPS){
+                al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
             }
-
-            if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
-                evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
-                    letras3(FPS, ALTURA, LARGURA,pers_sel);
-            }
-        }
-
-        tempo_fin = al_get_time() - tempo_ini;
-
-        if(tempo_fin < 1.0 / FPS){
-            al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
         }
     }
-  }
 
     destruir_palavras3(janela, fila_eventos, fonte, pergunta, icone);
 
@@ -230,7 +226,7 @@ int rato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
                 //Batalhar
-                if(evento.mouse.x > LARGURA * 0.4 && evento.mouse.x < LARGURA * 0.4 + al_get_bitmap_width(caixa1) &&
+                if(evento.mouse.x > LARGURA * 0.12 && evento.mouse.x < LARGURA * 0.12 + al_get_bitmap_width(caixa1) &&
                     evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
                         al_draw_bitmap(caixa3, LARGURA * 0.12, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.32, ALTURA * 0.5,0);
@@ -247,28 +243,29 @@ int rato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                 }
 
 
-            if(let1){
-                al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
-                al_flip_display();
+                if(let1){
+                    al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_flip_display();
+                }
+
+
+
+                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
+                    evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
+                        al_destroy_display(janela);
+                        letras3(FPS, ALTURA, LARGURA,pers_sel);
+                }
             }
 
+            tempo_fin = al_get_time() - tempo_ini;
 
-
-            if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
-                evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
-                    letras3(FPS, ALTURA, LARGURA,pers_sel);
+            if(tempo_fin < 1.0 / FPS){
+                al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
             }
-        }
-
-        tempo_fin = al_get_time() - tempo_ini;
-
-        if(tempo_fin < 1.0 / FPS){
-            al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
         }
     }
-}
+
     destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
 
     return 0;
@@ -363,7 +360,7 @@ int dado3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
                 //Batalhar
-                if(evento.mouse.x > LARGURA * 0.3 && evento.mouse.x < LARGURA * 0.3 + al_get_bitmap_width(caixa1) &&
+                if(evento.mouse.x > LARGURA * 0.52 && evento.mouse.x < LARGURA * 0.52 + al_get_bitmap_width(caixa1) &&
                     evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
                         al_draw_bitmap(caixa1, LARGURA * 0.12, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.32, ALTURA * 0.5,0);
@@ -379,14 +376,11 @@ int dado3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         let1 = true;
                 }
 
-
-
                 if(let1){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
-
 
                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
@@ -395,13 +389,13 @@ int dado3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                 }
             }
 
-        tempo_fin = al_get_time() - tempo_ini;
+            tempo_fin = al_get_time() - tempo_ini;
 
-        if(tempo_fin < 1.0 / FPS){
-            al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
+            if(tempo_fin < 1.0 / FPS){
+                al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
+            }
         }
-      }
-     }
+    }
 
     destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
 
@@ -496,7 +490,7 @@ int barco3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
                 //Batalhar
-                if(evento.mouse.x > LARGURA * 0.4 && evento.mouse.x < LARGURA * 0.4 + al_get_bitmap_width(caixa1) &&
+                if(evento.mouse.x > LARGURA * 0.12 && evento.mouse.x < LARGURA * 0.12 + al_get_bitmap_width(caixa1) &&
                     evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
                         al_draw_bitmap(caixa3, LARGURA * 0.12, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.32, ALTURA * 0.5,0);
@@ -512,29 +506,27 @@ int barco3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         let1 = true;
                 }
 
+                if(let1){
+                    al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_flip_display();
+                }
 
-            if(let1){
-                al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
-                al_flip_display();
+                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
+                    evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
+                        al_destroy_display(janela);
+                        letras3(FPS, ALTURA, LARGURA,pers_sel);
+                }
             }
 
+            tempo_fin = al_get_time() - tempo_ini;
 
-
-            if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
-                evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
-                    letras3(FPS, ALTURA, LARGURA,pers_sel);
+            if(tempo_fin < 1.0 / FPS){
+                al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
             }
-        }
-
-        tempo_fin = al_get_time() - tempo_ini;
-
-        if(tempo_fin < 1.0 / FPS){
-            al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
         }
     }
-}
+
     destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
 
     return 0;
@@ -628,7 +620,7 @@ int sapato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
                 //Batalhar
-                if(evento.mouse.x > LARGURA * 0.4 && evento.mouse.x < LARGURA * 0.4 + al_get_bitmap_width(caixa1) &&
+                if(evento.mouse.x > LARGURA * 0.72 && evento.mouse.x < LARGURA * 0.72 + al_get_bitmap_width(caixa1) &&
                     evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
                         al_draw_bitmap(caixa1, LARGURA * 0.12, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.32, ALTURA * 0.5,0);
@@ -644,29 +636,27 @@ int sapato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         let1 = true;
                 }
 
+                if(let1){
+                    al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_flip_display();
+                }
 
-            if(let1){
-                al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
-                al_flip_display();
+                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
+                    evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
+                        al_destroy_display(janela);
+                        letras3(FPS, ALTURA, LARGURA,pers_sel);
+                }
             }
 
+            tempo_fin = al_get_time() - tempo_ini;
 
-
-            if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
-                evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
-                    letras3(FPS, ALTURA, LARGURA,pers_sel);
+            if(tempo_fin < 1.0 / FPS){
+                al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
             }
-        }
-
-        tempo_fin = al_get_time() - tempo_ini;
-
-        if(tempo_fin < 1.0 / FPS){
-            al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
         }
     }
-}
+
     destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
 
     return 0;
@@ -760,7 +750,7 @@ int escada3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
                 //Batalhar
-                if(evento.mouse.x > LARGURA * 0.4 && evento.mouse.x < LARGURA * 0.4 + al_get_bitmap_width(caixa1) &&
+                if(evento.mouse.x > LARGURA * 0.32 && evento.mouse.x < LARGURA * 0.32 + al_get_bitmap_width(caixa1) &&
                     evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
                         al_draw_bitmap(caixa1, LARGURA * 0.12, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa3, LARGURA * 0.32, ALTURA * 0.5,0);
@@ -777,28 +767,27 @@ int escada3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                 }
 
 
-            if(let1){
-                al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
-                al_flip_display();
+                if(let1){
+                    al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_flip_display();
+                }
+
+                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
+                    evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
+                        al_destroy_display(janela);
+                        letras3(FPS, ALTURA, LARGURA,pers_sel);
+                }
             }
 
+            tempo_fin = al_get_time() - tempo_ini;
 
-
-            if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
-                evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
-                    letras3(FPS, ALTURA, LARGURA,pers_sel);
+            if(tempo_fin < 1.0 / FPS){
+                al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
             }
-        }
-
-        tempo_fin = al_get_time() - tempo_ini;
-
-        if(tempo_fin < 1.0 / FPS){
-            al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
         }
     }
-}
+
     destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
 
     return 0;
@@ -892,7 +881,7 @@ int livro3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
                 //Batalhar
-                if(evento.mouse.x > LARGURA * 0.4 && evento.mouse.x < LARGURA * 0.4 + al_get_bitmap_width(caixa1) &&
+                if(evento.mouse.x > LARGURA * 0.12 && evento.mouse.x < LARGURA * 0.12 + al_get_bitmap_width(caixa1) &&
                     evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
                         al_draw_bitmap(caixa3, LARGURA * 0.12, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.32, ALTURA * 0.5,0);
@@ -908,29 +897,27 @@ int livro3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         let1 = true;
                 }
 
+                if(let1){
+                    al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_flip_display();
+                }
 
-            if(let1){
-                al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
-                al_flip_display();
+                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
+                    evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
+                        al_destroy_display(janela);
+                        letras3(FPS, ALTURA, LARGURA,pers_sel);
+                }
             }
 
+            tempo_fin = al_get_time() - tempo_ini;
 
-
-            if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
-                evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
-                    letras3(FPS, ALTURA, LARGURA,pers_sel);
+            if(tempo_fin < 1.0 / FPS){
+                al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
             }
-        }
-
-        tempo_fin = al_get_time() - tempo_ini;
-
-        if(tempo_fin < 1.0 / FPS){
-            al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
         }
     }
-}
+
     destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
 
     return 0;
@@ -1024,7 +1011,7 @@ int abelha3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
                 //Batalhar
-                if(evento.mouse.x > LARGURA * 0.4 && evento.mouse.x < LARGURA * 0.4 + al_get_bitmap_width(caixa1) &&
+                if(evento.mouse.x > LARGURA * 0.32 && evento.mouse.x < LARGURA * 0.32 + al_get_bitmap_width(caixa1) &&
                     evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
                         al_draw_bitmap(caixa1, LARGURA * 0.12, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa3, LARGURA * 0.32, ALTURA * 0.5,0);
@@ -1041,28 +1028,27 @@ int abelha3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                 }
 
 
-            if(let1){
-                al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
-                al_flip_display();
+                if(let1){
+                    al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_flip_display();
+                }
+
+                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
+                    evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
+                        al_destroy_display(janela);
+                        letras3(FPS, ALTURA, LARGURA,pers_sel);
+                }
             }
 
+            tempo_fin = al_get_time() - tempo_ini;
 
-
-            if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
-                evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
-                    letras3(FPS, ALTURA, LARGURA,pers_sel);
+            if(tempo_fin < 1.0 / FPS){
+                al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
             }
-        }
-
-        tempo_fin = al_get_time() - tempo_ini;
-
-        if(tempo_fin < 1.0 / FPS){
-            al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
         }
     }
-}
+
     destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
 
     return 0;
@@ -1156,7 +1142,7 @@ int galo3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
                 //Batalhar
-                if(evento.mouse.x > LARGURA * 0.4 && evento.mouse.x < LARGURA * 0.4 + al_get_bitmap_width(caixa1) &&
+                if(evento.mouse.x > LARGURA * 0.72 && evento.mouse.x < LARGURA * 0.72 + al_get_bitmap_width(caixa1) &&
                     evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
                         al_draw_bitmap(caixa1, LARGURA * 0.12, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.32, ALTURA * 0.5,0);
@@ -1173,28 +1159,29 @@ int galo3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                 }
 
 
-            if(let1){
-                al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
-                al_flip_display();
+                if(let1){
+                    al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_flip_display();
+                }
+
+
+
+                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
+                    evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
+                        al_destroy_display(janela);
+                        letras3(FPS, ALTURA, LARGURA,pers_sel);
+                }
             }
 
+            tempo_fin = al_get_time() - tempo_ini;
 
-
-            if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
-                evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
-                    letras3(FPS, ALTURA, LARGURA,pers_sel);
+            if(tempo_fin < 1.0 / FPS){
+                al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
             }
-        }
-
-        tempo_fin = al_get_time() - tempo_ini;
-
-        if(tempo_fin < 1.0 / FPS){
-            al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
         }
     }
-}
+
     destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
 
     return 0;
@@ -1288,7 +1275,7 @@ int juiz3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
                 //Batalhar
-                if(evento.mouse.x > LARGURA * 0.4 && evento.mouse.x < LARGURA * 0.4 + al_get_bitmap_width(caixa1) &&
+                if(evento.mouse.x > LARGURA * 0.52 && evento.mouse.x < LARGURA * 0.52 + al_get_bitmap_width(caixa1) &&
                     evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
                         al_draw_bitmap(caixa1, LARGURA * 0.12, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.32, ALTURA * 0.5,0);
@@ -1305,28 +1292,27 @@ int juiz3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                 }
 
 
-            if(let1){
-                al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
-                al_flip_display();
+                if(let1){
+                    al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_flip_display();
+                }
+
+                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
+                    evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
+                        al_destroy_display(janela);
+                        letras3(FPS, ALTURA, LARGURA,pers_sel);
+                }
             }
 
+            tempo_fin = al_get_time() - tempo_ini;
 
-
-            if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
-                evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
-                    letras3(FPS, ALTURA, LARGURA,pers_sel);
+            if(tempo_fin < 1.0 / FPS){
+                al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
             }
-        }
-
-        tempo_fin = al_get_time() - tempo_ini;
-
-        if(tempo_fin < 1.0 / FPS){
-            al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
         }
     }
-}
+
     destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
 
     return 0;
