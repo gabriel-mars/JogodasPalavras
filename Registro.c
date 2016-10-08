@@ -15,7 +15,7 @@ int main(void){
     struct cadastrar aluno;
     int cont = 1;
     FILE *fp;
-    setlocale(LC_ALL, "portuguese");
+    setlocale(LC_ALL, "");
     do{
         printf("\n---------- Cadastro de Jogadores -----------\n\n");
         //Repetição para cadastro de alunos
