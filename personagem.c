@@ -19,6 +19,7 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_AUDIO_STREAM * voz1 = NULL;
     ALLEGRO_AUDIO_STREAM * voz2 = NULL;
+    ALLEGRO_AUDIO_STREAM * voz3 = NULL;
 
     //Declaração de variáveis
     bool aberto = true;
@@ -51,6 +52,7 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     icone = al_load_bitmap("Arte/icone.png");
     voz1 = al_load_sample("Narrador/voltar_menu.ogg");
     voz2 = al_load_sample("Narrador/avancar.ogg");
+    voz3 = al_load_sample("Narrador/personagem.ogg");
 
     //Adição do eventos na fila
     al_register_event_source(fila_eventos, al_get_display_event_source(janela));
@@ -73,6 +75,7 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.06, ALTURA * 0.78, 0, "MENU");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.2, 0, "ESCOLHA SEU PERSONAGEM:");
+    al_play_sample(voz3,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
 
     al_flip_display();
 

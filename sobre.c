@@ -68,7 +68,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
     al_draw_textf(fonte2, al_map_rgb(255, 255,255), LARGURA * 0.21, ALTURA * 0.78, 0, "MENU");
     al_draw_textf(fonte2, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.78, 0, "SAIR");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.2, 0, "JOGO DAS PALAVRAS É UM JOGO COM OBJETIVO EDUCACIONAL.");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.25, 0, "DESENVOLVIDO PELOS ALUNOS FELIPE, GABRIEL RIBEIRO, GABRIEL RODRIGO E TAISES.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.25, 0, "DESENVOLVIDO PELOS ALUNOS FELIPE LEME, GABRIEL RIBEIRO, GABRIEL RODRIGO E TAISES MENDES.");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.30, 0, "O JOGO É FOCADO EM AUXILIAR NO PROCESSO DE ALFABETIZAÇÃO.");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.35, 0, "O JOGO FAZ O USO DE UMA METODOLOGIA SIMPLES E DIVERTIDA.");
 
@@ -142,6 +142,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
                 if(evento.mouse.x >= LARGURA * 0.2 && evento.mouse.x <= LARGURA * 0.2 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.76 && evento.mouse.y <= ALTURA * 0.76 + al_get_bitmap_height(play)){
                     destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    al_destroy_sample(voz);
                     main();
                 }
             }
