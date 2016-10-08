@@ -3,9 +3,9 @@
 
 O Jogo das Palavras é um projeto Open Source e todo o seu conteúdo pode ser compartilhado e alterado por qualquer desenvolvedor desde que siga os seguintes pontos:
 
-1- Toda e qualquer alteração deve ser documentada;
-2- O desenvolvedor deve se responsabilizar por quaisquer bugs gerados;
-3- Este projeto não deve ser distribuido para fins comerciais em hipótese alguma;
+1- Toda e qualquer alteração deve ser documentada;\n
+2- O desenvolvedor deve se responsabilizar por quaisquer bugs gerados;\n
+3- Este projeto não deve ser distribuido para fins comerciais em hipótese alguma;\n
 4- Qualquer quantia em dinheiro arrecada deve ser repartida para todos os desenvolvedores do projeto.
 
 Este projeto tem como objetivo o estudo e uso da linguagem de programação C juntamente com a biblioteca para desenvolvimento gráfico Allegro, em sua versão 5.
