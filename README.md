@@ -8,10 +8,10 @@ A idéia principal do projeto é auxiliar crianças a escrever e a ler, além de
 Nosso projeto é desenvolvido para ser multiplataforma, rodando em Windows (v8.1 e v10) e Linux Ubuntu 16.04 Xenial Xerus.
 
 ## Integrantes##
-####Felipe
+####Felipe Leme
 ####Gabriel Garcia
 ####Gabriel Rodrigo
-####Taises
+####Taises Mendes
 
 
 # Importante #
