@@ -233,9 +233,9 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "Asa");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "Saia");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "Casa");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "BALA");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "SALA");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "CASA");//Escrevendo as dicas;
                   al_flip_display();
             }
 
@@ -487,9 +487,9 @@ int rato(int FPS,int ALTURA,int LARGURA,int pers_sel){
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "Rato");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "Pato");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "Salto");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "RATO");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "PATO");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "GATO");//Escrevendo as dicas;
                   al_flip_display();
 
                   }
@@ -741,9 +741,9 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "Casco");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "Dado");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "Sapo");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "PATO");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "DADO");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "SAPO");//Escrevendo as dicas;
                   al_flip_display();
 
                   }
@@ -1025,9 +1025,9 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "Sapo");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "Barco");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "Pasto");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "DARDO");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "BARCO");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "PASTO");//Escrevendo as dicas;
                   al_flip_display();
 
                   }
@@ -1331,9 +1331,9 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "Sapato");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "Sacado");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "Escapo");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "SAPATO");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "RENATO");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "ESCAPO");//Escrevendo as dicas;
                   al_flip_display();
 
                   }
@@ -1624,9 +1624,9 @@ int escada(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                         al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                         al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
-                        al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "Sacada");//Escrevendo as dicas;
-                        al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "Ovada");//Escrevendo as dicas;
-                        al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "Escada");//Escrevendo as dicas;
+                        al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "SACADA");//Escrevendo as dicas;
+                        al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "SALADA");//Escrevendo as dicas;
+                        al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "ESCADA");//Escrevendo as dicas;
                         al_flip_display();
                 }
 
@@ -1912,9 +1912,9 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "Livro");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "Caderno");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "Bicho");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "LIVRO");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "CADERNO");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "BICHO");//Escrevendo as dicas;
                   al_flip_display();
 
                   }
@@ -2214,9 +2214,9 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                         al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                         al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
-                        al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "Camelo");//Escrevendo as dicas;
-                        al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "Abelha");//Escrevendo as dicas;
-                        al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "Formiga");//Escrevendo as dicas;
+                        al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "ORELHA");//Escrevendo as dicas;
+                        al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "ABELHA");//Escrevendo as dicas;
+                        al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "GROSELHA");//Escrevendo as dicas;
                         al_flip_display();
                   }
             }
@@ -2467,9 +2467,9 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "Galo");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "Galinha");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "Pato");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "GALO");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "PATO");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "RATO");//Escrevendo as dicas;
                   al_flip_display();
 
                   }
@@ -2785,7 +2785,7 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
                   al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "TABELA");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "CANELA");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "PANELA");//Escrevendo as dicas;
                   al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "JANELA");//Escrevendo as dicas;
                   al_flip_display();
 
