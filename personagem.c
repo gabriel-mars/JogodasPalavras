@@ -73,8 +73,8 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     al_draw_bitmap(pers4, LARGURA * 0.80, ALTURA * 0.36, 0);
 
     //Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.06, ALTURA * 0.78, 0, "MENU");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.2, 0, "ESCOLHA SEU PERSONAGEM:");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.08, ALTURA * 0.775, 0, "MENU");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.345, ALTURA * 0.2, 0, "ESCOLHA SEU PERSONAGEM:");
     al_play_sample(voz3,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
 
     al_flip_display();
@@ -108,7 +108,7 @@ int personagens(int FPS, int ALTURA, int LARGURA){
 
                 if(sel1){
                     al_draw_bitmap(play_sel, LARGURA * 0.05, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.06, ALTURA * 0.78, 0, "MENU");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.08, ALTURA * 0.775, 0, "MENU");
 
                     if(opcao != 1){
                         al_play_sample(voz1,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
@@ -117,7 +117,7 @@ int personagens(int FPS, int ALTURA, int LARGURA){
                 }
                 else{
                     al_draw_bitmap(play, LARGURA * 0.05, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.06, ALTURA * 0.78, 0, "MENU");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.08, ALTURA * 0.775, 0, "MENU");
 
                 }
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){

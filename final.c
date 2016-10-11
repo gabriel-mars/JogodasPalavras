@@ -55,9 +55,9 @@ int fim(int FPS, int ALTURA, int LARGURA, int pers_sel){
     al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.76, 0);
     al_draw_bitmap(obrigado, LARGURA * 0.28, ALTURA * 0.1, 0);
 
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.61, ALTURA * 0.78, 0, "SAIR");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.4, 0, "AGRADECEMOS POR JOGAR O NOSSO JOGO!");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.5, 0, "ESPERAMOS QUE TENHAM GOSTADO.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.64, ALTURA * 0.773, 0, "SAIR");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.4, 0, "OBRIGADO POR JOGAR COM A GENTE!");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.5, 0, "ESPERAMOS QUE TENHA GOSTADO.");
 
     al_flip_display();
 
@@ -86,10 +86,10 @@ int fim(int FPS, int ALTURA, int LARGURA, int pers_sel){
 
                 if(sel1){
                     al_draw_bitmap(play_sel, LARGURA * 0.6, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.78, 0, "SAIR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.64, ALTURA * 0.773, 0, "SAIR");//Escrevendo a opção no Menu;
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.6, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.78, 0, "SAIR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.64, ALTURA * 0.773, 0, "SAIR");//Escrevendo a opção no Menu;
                 }
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
                 if(evento.mouse.x >= LARGURA * 0.6 && evento.mouse.x <= LARGURA * 0.6 + al_get_bitmap_width(play) &&

@@ -71,16 +71,16 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
     al_flip_display();
 
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.39, ALTURA * 0.15, 0, "ESCOLHA UMA LETRA:");
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.38, 0, "A");
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.36, ALTURA * 0.38, 0, "B");
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.38, 0, "C");
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.66, ALTURA * 0.38, 0, "L");
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.38, 0, "J");
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.58, 0, "G");
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.36, ALTURA * 0.58, 0, "S");
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.58, 0, "E");
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.66, ALTURA * 0.58, 0, "R");
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.58, 0, "D");
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.365, 0, "A");
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.36, ALTURA * 0.365, 0, "B");
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.365, 0, "C");
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.66, ALTURA * 0.365, 0, "L");
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.365, 0, "J");
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.565, 0, "G");
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.36, ALTURA * 0.565, 0, "S");
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.565, 0, "E");
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.66, ALTURA * 0.565, 0, "R");
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.565, 0, "D");
 
     al_flip_display();
 
@@ -194,73 +194,73 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
 
                 if(sel1){
                     al_draw_bitmap(play_sel, LARGURA * 0.20, ALTURA * 0.36, 0);
-                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.21, ALTURA * 0.38, 0, "A");
+                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.21, ALTURA * 0.365, 0, "A");
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.20, ALTURA * 0.36, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.38, 0, "A");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.365, 0, "A");
                 }
                 if(sel2){
                     al_draw_bitmap(play_sel, LARGURA * 0.35, ALTURA * 0.36, 0);
-                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.36, ALTURA * 0.38, 0, "B");
+                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.36, ALTURA * 0.365, 0, "B");
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.35, ALTURA * 0.36, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.36, ALTURA * 0.38, 0, "B");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.36, ALTURA * 0.365, 0, "B");
                 }
                 if(sel3){
                     al_draw_bitmap(play_sel, LARGURA * 0.50, ALTURA * 0.36, 0);
-                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.51, ALTURA * 0.38, 0, "C");
+                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.51, ALTURA * 0.365, 0, "C");
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.50, ALTURA * 0.36, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.38, 0, "C");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.365, 0, "C");
                 }
                 if(sel4){
                     al_draw_bitmap(play_sel, LARGURA * 0.65, ALTURA * 0.36, 0);
-                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.66, ALTURA * 0.38, 0, "L");
+                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.66, ALTURA * 0.365, 0, "L");
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.65, ALTURA * 0.36, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.66, ALTURA * 0.38, 0, "L");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.66, ALTURA * 0.365, 0, "L");
                 }
                 if(sel5){
                     al_draw_bitmap(play_sel, LARGURA * 0.80, ALTURA * 0.36, 0);
-                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.81, ALTURA * 0.38, 0, "J");
+                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.81, ALTURA * 0.365, 0, "J");
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.80, ALTURA * 0.36, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.38, 0, "J");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.365, 0, "J");
                 }
                 if(sel6){
                     al_draw_bitmap(play_sel, LARGURA * 0.20, ALTURA * 0.56, 0);
-                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.21, ALTURA * 0.58, 0, "G");
+                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.21, ALTURA * 0.565, 0, "G");
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.20, ALTURA * 0.56, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.58, 0, "G");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.565, 0, "G");
                 }
                 if(sel7){
                     al_draw_bitmap(play_sel, LARGURA * 0.35, ALTURA * 0.56, 0);
-                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.36, ALTURA * 0.58, 0, "S");
+                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.36, ALTURA * 0.565, 0, "S");
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.35, ALTURA * 0.56, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.36, ALTURA * 0.58, 0, "S");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.36, ALTURA * 0.565, 0, "S");
                 }
                 if(sel8){
                     al_draw_bitmap(play_sel, LARGURA * 0.50, ALTURA * 0.56, 0);
-                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.51, ALTURA * 0.58, 0, "E");
+                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.51, ALTURA * 0.565, 0, "E");
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.50, ALTURA * 0.56, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.58, 0, "E");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.565, 0, "E");
                 }
                 if(sel9){
                     al_draw_bitmap(play_sel, LARGURA * 0.65, ALTURA * 0.56, 0);
-                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.66, ALTURA * 0.58, 0, "R");
+                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.66, ALTURA * 0.565, 0, "R");
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.65, ALTURA * 0.56, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.66, ALTURA * 0.58, 0, "R");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.66, ALTURA * 0.565, 0, "R");
                 }
                 if(sel10){
                     al_draw_bitmap(play_sel, LARGURA * 0.80, ALTURA * 0.56, 0);
-                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.81, ALTURA * 0.58, 0, "D");
+                    al_draw_textf(fonte, al_map_rgb(0, 0, 0), LARGURA * 0.81, ALTURA * 0.565, 0, "D");
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.80, ALTURA * 0.56, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.58, 0, "D");
+                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.565, 0, "D");
                 }
                 if(sel11){
                     al_draw_bitmap(play2, LARGURA * 0.8, ALTURA * 0.7, 0);

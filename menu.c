@@ -103,10 +103,10 @@ int main(void){
     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.86, 0);
 
     //Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.58, 0, "JOGAR");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.68, 0, "AJUDA");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.78, 0, "SOBRE");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.05, ALTURA * 0.88, 0, "SAIR");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.065, ALTURA * 0.575, 0, "JOGAR");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.065, ALTURA * 0.675, 0, "AJUDA");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.065, ALTURA * 0.775, 0, "SOBRE");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.075, ALTURA * 0.875, 0, "SAIR");
 
     al_flip_display();
 
@@ -181,7 +181,7 @@ int main(void){
                 }
                 if(sel1){
                     al_draw_bitmap(play_sel, LARGURA * 0.04, ALTURA * 0.56, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.58, 0, "JOGAR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.065, ALTURA * 0.575, 0, "JOGAR");
 
                     if(opcao != 1){
                         al_play_sample(voz,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
@@ -190,11 +190,11 @@ int main(void){
                 }
                 else{
                     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.56, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.58, 0, "JOGAR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.065, ALTURA * 0.575, 0, "JOGAR");
                 }
                 if(sel2){
                     al_draw_bitmap(play_sel, LARGURA * 0.04, ALTURA * 0.66, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.68, 0, "AJUDA");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.065, ALTURA * 0.675, 0, "AJUDA");
 
                     if(opcao != 2){
                         al_play_sample(voz1,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
@@ -203,12 +203,12 @@ int main(void){
 
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.66, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.68, 0, "AJUDA");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.065, ALTURA * 0.675, 0, "AJUDA");
                 }
 
                 if(sel3){
                     al_draw_bitmap(play_sel, LARGURA * 0.04, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.78, 0, "SOBRE");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.065, ALTURA * 0.775, 0, "SOBRE");
 
                     if(opcao != 3){
                         al_play_sample(voz2,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
@@ -217,12 +217,12 @@ int main(void){
 
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.76, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.78, 0, "SOBRE");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.065, ALTURA * 0.775, 0, "SOBRE");
                 }
 
                 if(sel4){
                     al_draw_bitmap(play_sel, LARGURA * 0.04, ALTURA * 0.86, 0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.88, 0, "SAIR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.075, ALTURA * 0.875, 0, "SAIR");
 
                     if(opcao != 4){
                         al_play_sample(voz3,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
@@ -231,7 +231,7 @@ int main(void){
 
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.04, ALTURA * 0.86,0);//desenhar(play);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.05, ALTURA * 0.88, 0, "SAIR");//Escrevendo a opção no Menu;
+                    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.075, ALTURA * 0.875, 0, "SAIR");
                 }
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){ //Janelas com o clique
                 //Jogar
