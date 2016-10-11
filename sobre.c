@@ -45,7 +45,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fonte2 = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
-    icone = al_load_bitmap("Arte/icone.png");
+    icone = al_load_bitmap("Arte/icone2.png");
     voz = al_load_sample("Narrador/sobre_tela.ogg");
     voz1 = al_load_sample("Narrador/voltar_menu.ogg");
     voz2 = al_load_sample("Narrador/sair.ogg");

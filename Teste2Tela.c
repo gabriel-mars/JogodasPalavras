@@ -43,7 +43,7 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
     play = al_load_bitmap("Arte/barrinha.png");
     play_sel = al_load_bitmap("Arte/barrinha_sel.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
-    icone = al_load_bitmap("Arte/icone.png");
+    icone = al_load_bitmap("Arte/icone2.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     voz1 = al_load_sample("Narrador/letras.ogg");
     voz2 = al_load_sample("Narrador/imagens.ogg");

@@ -49,7 +49,7 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     play_sel = al_load_bitmap("Arte/barrinha_sel.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
-    icone = al_load_bitmap("Arte/icone.png");
+    icone = al_load_bitmap("Arte/icone2.png");
     voz1 = al_load_sample("Narrador/voltar_menu.ogg");
     voz2 = al_load_sample("Narrador/avancar.ogg");
     voz3 = al_load_sample("Narrador/personagem.ogg");

@@ -39,7 +39,7 @@ int fim(int FPS, int ALTURA, int LARGURA, int pers_sel){
     play_sel = al_load_bitmap("Arte/barrinha_sel.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
-    icone = al_load_bitmap("Arte/icone.png");
+    icone = al_load_bitmap("Arte/icone2.png");
     obrigado = al_load_bitmap("Arte/Obrigado.png");
 
      //Adição do eventos na fila

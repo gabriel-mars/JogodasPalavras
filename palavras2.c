@@ -49,7 +49,7 @@ int casa2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     selecao = al_load_bitmap("Arte/selecao.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     avancar = al_load_bitmap("Arte/barrinha.png");
-    icone = al_load_bitmap("Arte/icone.png");
+    icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/caixa1.png");
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");

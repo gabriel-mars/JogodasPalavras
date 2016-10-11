@@ -39,7 +39,7 @@ int letras2(int FPS, int ALTURA, int LARGURA, int pers_sel){
     janela = al_create_display(LARGURA, ALTURA);
     fila_eventos = al_create_event_queue();
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
-    icone = al_load_bitmap("Arte/icone.png");
+    icone = al_load_bitmap("Arte/icone2.png");
     play = al_load_bitmap("Arte/caixa4.png");
     play_sel = al_load_bitmap("Arte/caixa2.png");
     play1 = al_load_bitmap("Arte/barra.png");

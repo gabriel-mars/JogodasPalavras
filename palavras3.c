@@ -43,7 +43,7 @@ int casa3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     pergunta = al_load_bitmap("Arte/casa.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     avancar = al_load_bitmap("Arte/barrinha.png");
-    icone = al_load_bitmap("Arte/icone.png");
+    icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/barra.png");
     caixa3= al_load_bitmap("Arte/barra_sel.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
