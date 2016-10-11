@@ -2488,7 +2488,7 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
     return 0;
 }
 
-int juiz(int FPS,int ALTURA,int LARGURA,int pers_sel){
+int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Inicialização das variáveis com Allegro
     ALLEGRO_DISPLAY * janela = NULL;
     ALLEGRO_BITMAP * fundo = NULL;
@@ -2512,6 +2512,8 @@ int juiz(int FPS,int ALTURA,int LARGURA,int pers_sel){
     bool let2 = false;
     bool let3 = false;
     bool let4 = false;
+    bool let5 = false;
+    bool let6 = false;
     bool sel1 = false;
 
     //Inicialização das bibliotecas
@@ -2526,7 +2528,7 @@ int juiz(int FPS,int ALTURA,int LARGURA,int pers_sel){
     al_init_ttf_addon();
 
     janela =  al_create_display(LARGURA, ALTURA);
-    pergunta = al_load_bitmap("Arte/juiz.png");
+    pergunta = al_load_bitmap("Arte/janela.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     avancar = al_load_bitmap("Arte/barrinha.png");
     icone = al_load_bitmap("Arte/icone.png");
@@ -2565,12 +2567,12 @@ int juiz(int FPS,int ALTURA,int LARGURA,int pers_sel){
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.501, 0, "A");//Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.501, 0, "F");//Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.501, 0, "G");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "U");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.701, 0, "P");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "N");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.701, 0, "L");//Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.701, 0, "Y");//Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "O");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "Z");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
 
     al_flip_display();
@@ -2613,15 +2615,44 @@ int juiz(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.501, 0, "A");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.501, 0, "F");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.501, 0, "G");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "U");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.701, 0, "P");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "N");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.701, 0, "L");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.701, 0, "Y");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "O");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "Z");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
 
                         al_flip_display();
                         let1 = true;
+                }
+
+                if(evento.mouse.x > LARGURA * 0.4 && evento.mouse.x < LARGURA * 0.4 + al_get_bitmap_width(caixa1) &&
+                    evento.mouse.y > ALTURA * 0.5 && evento.mouse.y < ALTURA * 0.5 + al_get_bitmap_height(caixa1)){
+                        al_draw_bitmap(caixa1, LARGURA * 0.3, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa3, LARGURA * 0.4, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.5, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.6, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.7, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.3, ALTURA * 0.7,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.4, ALTURA * 0.7,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.5, ALTURA * 0.7,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.6, ALTURA * 0.7,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.7, ALTURA * 0.7,0);
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.501, 0, "J");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.501, 0, "A");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.501, 0, "F");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.501, 0, "G");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "N");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.701, 0, "L");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.701, 0, "Y");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
+
+                        al_flip_display();
+                        let2 = true;
                 }
 
                 if(evento.mouse.x > LARGURA * 0.7 && evento.mouse.x < LARGURA * 0.7 + al_get_bitmap_width(caixa1) &&
@@ -2640,18 +2671,19 @@ int juiz(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.501, 0, "A");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.501, 0, "F");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.501, 0, "G");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "U");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.701, 0, "P");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "N");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.701, 0, "L");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.701, 0, "Y");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "O");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "Z");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
 
                         al_flip_display();
-                        let2 = true;
+                        let3 = true;
                 }
 
-                if(evento.mouse.x > LARGURA * 0.5 && evento.mouse.x < LARGURA * 0.5 + al_get_bitmap_width(caixa1) &&
+                if(evento.mouse.x > LARGURA * 0.6 && evento.mouse.x < LARGURA * 0.6 + al_get_bitmap_width(caixa1) &&
                     evento.mouse.y > ALTURA * 0.7 && evento.mouse.y < ALTURA * 0.7 + al_get_bitmap_height(caixa1)){
                         al_draw_bitmap(caixa1, LARGURA * 0.3, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.4, ALTURA * 0.5,0);
@@ -2660,22 +2692,51 @@ int juiz(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_bitmap(caixa1, LARGURA * 0.7, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.3, ALTURA * 0.7,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.4, ALTURA * 0.7,0);
-                        al_draw_bitmap(caixa3, LARGURA * 0.5, ALTURA * 0.7,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.5, ALTURA * 0.7,0);
+                        al_draw_bitmap(caixa3, LARGURA * 0.6, ALTURA * 0.7,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.7, ALTURA * 0.7,0);
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.501, 0, "J");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.501, 0, "A");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.501, 0, "F");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.501, 0, "G");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "N");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.701, 0, "L");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.701, 0, "Y");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
+
+                        al_flip_display();
+                        let4 = true;
+                }
+
+                if(evento.mouse.x > LARGURA * 0.3 && evento.mouse.x < LARGURA * 0.3 + al_get_bitmap_width(caixa1) &&
+                    evento.mouse.y > ALTURA * 0.7 && evento.mouse.y < ALTURA * 0.7 + al_get_bitmap_height(caixa1)){
+                        al_draw_bitmap(caixa1, LARGURA * 0.3, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.4, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.5, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.6, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.7, ALTURA * 0.5,0);
+                        al_draw_bitmap(caixa3, LARGURA * 0.3, ALTURA * 0.7,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.4, ALTURA * 0.7,0);
+                        al_draw_bitmap(caixa1, LARGURA * 0.5, ALTURA * 0.7,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.6, ALTURA * 0.7,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.7, ALTURA * 0.7,0);
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.501, 0, "J");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.501, 0, "A");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.501, 0, "F");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.501, 0, "G");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "U");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.701, 0, "P");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "N");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.701, 0, "L");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.701, 0, "Y");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "O");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "Z");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
 
                         al_flip_display();
-                        let3 = true;
+                        let5 = true;
                 }
 
                 if(evento.mouse.x > LARGURA * 0.7 && evento.mouse.x < LARGURA * 0.7 + al_get_bitmap_width(caixa1) &&
@@ -2694,18 +2755,19 @@ int juiz(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.501, 0, "A");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.501, 0, "F");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.501, 0, "G");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "U");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.701, 0, "P");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.501, 0, "N");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.31, ALTURA * 0.701, 0, "L");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.41, ALTURA * 0.701, 0, "Y");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "O");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "Z");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
 
                         al_flip_display();
-                        let4 = true;
+                        let6 = true;
                 }
 
-                if(let1 && let2 && let3 && let4){
+                if(let1 && let2 && let3 && let4 && let5 && let6){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
@@ -2722,9 +2784,9 @@ int juiz(int FPS,int ALTURA,int LARGURA,int pers_sel){
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "Bola");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "Juiz");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "Luiz");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "TABELA");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "CANELA");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "JANELA");//Escrevendo as dicas;
                   al_flip_display();
 
                   }

@@ -1187,7 +1187,7 @@ int galo3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     return 0;
 }
 
-int juiz3(int FPS,int ALTURA,int LARGURA,int pers_sel){
+int janela3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     //Inicialização das variáveis com Allegro
     ALLEGRO_DISPLAY * janela = NULL;
     ALLEGRO_BITMAP * fundo = NULL;
@@ -1219,7 +1219,7 @@ int juiz3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     al_init_ttf_addon();
 
     janela =  al_create_display(LARGURA, ALTURA);
-    pergunta = al_load_bitmap("Arte/juiz.png");
+    pergunta = al_load_bitmap("Arte/janela.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     avancar = al_load_bitmap("Arte/barrinha.png");
     icone = al_load_bitmap("Arte/icone.png");
@@ -1247,10 +1247,10 @@ int juiz3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     al_draw_bitmap(caixa1, LARGURA * 0.72, ALTURA * 0.5,0);
 
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.35, ALTURA * 0.06, 0, "CLIQUE NO MEU NOME:");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.13, ALTURA * 0.506, 0, "APRENDIZ");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.33, ALTURA * 0.506, 0, "QUIZ");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.53, ALTURA * 0.506, 0, "JUIZ");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.73, ALTURA * 0.506, 0, "LUIZ");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.13, ALTURA * 0.506, 0, "TABELA");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.33, ALTURA * 0.506, 0, "CANELA");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.53, ALTURA * 0.506, 0, "JANELA");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.73, ALTURA * 0.506, 0, "PANELA");//Escrevendo a opção no Menu;
     al_flip_display();
 
     al_set_window_title(janela, "Jogo das Palavras");
@@ -1282,10 +1282,10 @@ int juiz3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_bitmap(caixa3, LARGURA * 0.52, ALTURA * 0.5,0);
                         al_draw_bitmap(caixa1, LARGURA * 0.72, ALTURA * 0.5,0);
 
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.13, ALTURA * 0.506, 0, "APRENDIZ");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.33, ALTURA * 0.506, 0, "QUIZ");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.53, ALTURA * 0.506, 0, "JUIZ");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.73, ALTURA * 0.506, 0, "LUIZ");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.13, ALTURA * 0.506, 0, "TABELA");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.33, ALTURA * 0.506, 0, "CANELA");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.53, ALTURA * 0.506, 0, "JANELA");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.73, ALTURA * 0.506, 0, "PANELA");//Escrevendo a opção no Menu;
 
                         al_flip_display();
                         let1 = true;

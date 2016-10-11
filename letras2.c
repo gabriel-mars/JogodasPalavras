@@ -304,7 +304,7 @@ int letras2(int FPS, int ALTURA, int LARGURA, int pers_sel){
                 if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&
                 evento.mouse.x > LARGURA * 0.80 && evento.mouse.x < LARGURA * 0.80 + al_get_bitmap_width(play)){
                     destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
-                    juiz2(FPS, ALTURA, LARGURA, pers_sel);
+                    janela2(FPS, ALTURA, LARGURA, pers_sel);
                 }
 
                 if(evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play) &&

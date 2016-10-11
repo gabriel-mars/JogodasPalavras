@@ -687,7 +687,7 @@ int escada2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     janela =  al_create_display(LARGURA, ALTURA);
     pergunta = al_load_bitmap("Arte/escada.png");
     erro1 = al_load_bitmap("Arte/livro.png");
-    erro2 = al_load_bitmap("Arte/juiz.png");
+    erro2 = al_load_bitmap("Arte/janela.png");
     selecao = al_load_bitmap("Arte/selecao.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     avancar = al_load_bitmap("Arte/barrinha.png");
@@ -944,7 +944,7 @@ int abelha2(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
     janela =  al_create_display(LARGURA, ALTURA);
     pergunta = al_load_bitmap("Arte/abelha.png");
-    erro1 = al_load_bitmap("Arte/juiz.png");
+    erro1 = al_load_bitmap("Arte/janela.png");
     erro2 = al_load_bitmap("Arte/galo.png");
     selecao = al_load_bitmap("Arte/selecao.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
@@ -1165,7 +1165,7 @@ int galo2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     return 0;
 }
 
-int juiz2(int FPS,int ALTURA,int LARGURA,int pers_sel){
+int janela2(int FPS,int ALTURA,int LARGURA,int pers_sel){
         //Inicialização das variáveis com Allegro
     ALLEGRO_DISPLAY * janela = NULL;
     ALLEGRO_BITMAP * fundo = NULL;
@@ -1201,7 +1201,7 @@ int juiz2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     al_init_ttf_addon();
 
     janela =  al_create_display(LARGURA, ALTURA);
-    pergunta = al_load_bitmap("Arte/juiz.png");
+    pergunta = al_load_bitmap("Arte/janela.png");
     erro1 = al_load_bitmap("Arte/casa.png");
     erro2 = al_load_bitmap("Arte/dado.png");
     selecao = al_load_bitmap("Arte/selecao.png");
@@ -1229,7 +1229,7 @@ int juiz2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     al_draw_bitmap(pers_sel, LARGURA * 0.08, ALTURA * 0.6, 0);
 
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.37, ALTURA * 0.15, 0, "SELECIONE MINHA IMAGEM:");//Escrevendo a opção no Menu;
-    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.47, ALTURA * 0.2, 0, "JUIZ");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.47, ALTURA * 0.2, 0, "JANELA");//Escrevendo a opção no Menu;
 
     al_draw_bitmap(erro1, LARGURA * 0.24, ALTURA * 0.36, 0);
     al_draw_bitmap(erro2, LARGURA * 0.47, ALTURA * 0.36, 0);
