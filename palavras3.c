@@ -19,6 +19,7 @@ int casa3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * pergunta = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -47,6 +48,7 @@ int casa3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/barra.png");
     caixa3= al_load_bitmap("Arte/barra_sel.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -114,7 +116,7 @@ int casa3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                     if(let1){
                         al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                        al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");//Escrevendo a opção no Menu;
                         al_flip_display();
                     }
 
@@ -149,6 +151,7 @@ int rato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * pergunta = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -177,6 +180,7 @@ int rato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/barra.png");
     caixa3= al_load_bitmap("Arte/barra_sel.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -245,7 +249,7 @@ int rato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -283,6 +287,7 @@ int dado3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_SAMPLE * parabens = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -311,6 +316,7 @@ int dado3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/barra.png");
     caixa3= al_load_bitmap("Arte/barra_sel.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -378,7 +384,7 @@ int dado3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -413,6 +419,7 @@ int barco3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * pergunta = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -441,6 +448,7 @@ int barco3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/barra.png");
     caixa3= al_load_bitmap("Arte/barra_sel.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -508,7 +516,7 @@ int barco3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -543,6 +551,7 @@ int sapato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * pergunta = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -571,6 +580,7 @@ int sapato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/barra.png");
     caixa3= al_load_bitmap("Arte/barra_sel.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -638,7 +648,7 @@ int sapato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -673,6 +683,7 @@ int escada3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * pergunta = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -701,6 +712,7 @@ int escada3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/barra.png");
     caixa3= al_load_bitmap("Arte/barra_sel.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -769,7 +781,7 @@ int escada3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -804,6 +816,7 @@ int livro3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * pergunta = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -832,6 +845,7 @@ int livro3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/barra.png");
     caixa3= al_load_bitmap("Arte/barra_sel.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -899,7 +913,7 @@ int livro3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -934,6 +948,7 @@ int abelha3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * pergunta = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -962,6 +977,7 @@ int abelha3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/barra.png");
     caixa3= al_load_bitmap("Arte/barra_sel.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -1030,7 +1046,7 @@ int abelha3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -1065,6 +1081,7 @@ int galo3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * pergunta = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -1093,6 +1110,7 @@ int galo3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/barra.png");
     caixa3= al_load_bitmap("Arte/barra_sel.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -1161,7 +1179,7 @@ int galo3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -1198,6 +1216,7 @@ int janela3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * pergunta = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -1226,6 +1245,7 @@ int janela3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa1 = al_load_bitmap("Arte/barra.png");
     caixa3= al_load_bitmap("Arte/barra_sel.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -1294,7 +1314,7 @@ int janela3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
