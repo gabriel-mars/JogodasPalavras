@@ -67,9 +67,9 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.25, ALTURA * 0.15, 0, "COMBINE AS LETRAS DE ACORDO COM A FIGURA.");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.443, ALTURA * 0.265, 0, "LETRAS");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.25, ALTURA * 0.4, 0, "ESCOLHA A IMAGEM DE ACORDO COM A PALAVRA.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.25, ALTURA * 0.4, 0, "SELECIONE A IMAGEM DE ACORDO COM A PALAVRA.");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.435, ALTURA * 0.515, 0, "IMAGENS");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.25, ALTURA * 0.65, 0, "ESCOLHA A PALAVRA DE ACORDO COM A FIGURA.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.25, ALTURA * 0.65, 0, "SELECIONE A PALAVRA DE ACORDO COM A FIGURA.");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.43, ALTURA * 0.765, 0, "PALAVRAS");
 
     al_flip_display();

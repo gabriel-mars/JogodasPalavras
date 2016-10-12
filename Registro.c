@@ -21,32 +21,32 @@ int main(void){
         //Repetição para cadastro de alunos
         printf("Informe o nome: ");
         scanf ( "%[^\n]", &aluno.nome);
-        __fpurge(stdin);
+        fflush(stdin);
         //gets(aluno.nome);
 
         printf("Informe a escola: ");
         scanf ( "%[^\n]", &aluno.escola);
-        __fpurge(stdin);
+        fflush(stdin);
         //gets(aluno.escola);
 
         printf("Informe a idade: ");
         scanf("%i", &aluno.idade);
-        __fpurge(stdin);
+        fflush(stdin);
 
         printf("Jogaria em sua escola?");
         printf("\nS - Sim / N - Não ");
         scanf("%c", &aluno.jogaria);
-        __fpurge(stdin);
+        fflush(stdin);
 
         //Grava a struct em um arquivo
         fp = fopen("alunos.txt", "a");
 
-        fprintf(fp, "%s %s %i %c\n\n", aluno.nome, aluno.escola, aluno.idade, aluno.jogaria);
+        fprintf(fp, "%s %s %i %c %i\n\n", aluno.nome, aluno.escola, aluno.idade, aluno.jogaria, cont);
 
         fclose(fp);
 
         cont ++;
-        system("clear");
+        system("cls");
     }while(cont > 0);
 
     return 0;
