@@ -74,7 +74,7 @@ int personagens(int FPS, int ALTURA, int LARGURA){
 
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.08, ALTURA * 0.775, 0, "MENU");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.345, ALTURA * 0.2, 0, "ESCOLHA SEU PERSONAGEM:");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.345, ALTURA * 0.2, 0, "ESCOLHA  SEU  PERSONAGEM:");
     al_play_sample(voz3,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
 
     al_flip_display();

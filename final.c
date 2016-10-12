@@ -56,8 +56,8 @@ int fim(int FPS, int ALTURA, int LARGURA, int pers_sel){
     al_draw_bitmap(obrigado, LARGURA * 0.28, ALTURA * 0.1, 0);
 
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.64, ALTURA * 0.773, 0, "SAIR");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.4, 0, "OBRIGADO POR JOGAR COM A GENTE!");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.5, 0, "ESPERAMOS QUE TENHA GOSTADO.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.4, 0, "OBRIGADO  POR  JOGAR  COM  A  GENTE!");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.3, ALTURA * 0.5, 0, "ESPERAMOS  QUE  TENHA  GOSTADO.");
 
     al_flip_display();
 

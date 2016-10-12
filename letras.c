@@ -70,7 +70,7 @@ int letras(int FPS, int ALTURA, int LARGURA, int pers_sel){
 
     al_flip_display();
 
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.39, ALTURA * 0.15, 0, "ESCOLHA UMA LETRA:");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.39, ALTURA * 0.15, 0, "ESCOLHA  UMA  LETRA:");
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.21, ALTURA * 0.365, 0, "A");
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.36, ALTURA * 0.365, 0, "B");
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.365, 0, "C");

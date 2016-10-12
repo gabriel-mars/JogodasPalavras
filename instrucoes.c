@@ -68,13 +68,13 @@ int instrucoes(int FPS, int ALTURA, int LARGURA){
     //Escrevendo a opção no Menu;
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.233, ALTURA * 0.775, 0, "MENU");
     al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.638, ALTURA * 0.775, 0, "SAIR");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.1, 0, "NO MODO 'LETRAS':");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.15, 0, "CLIQUE NAS LETRAS QUE FORMAM O NOME DA IMAGEM.");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.20, 0, "SE PRECISAR DE AJUDA CLIQUE NO BOTÃO '?'.");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.3, 0, "NO MODO 'IMAGEM':");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.35, 0, "ESCOLHA A IMAGEM DE ACORDO COM A PALAVRA.");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.45, 0, "NO MODO PALAVRAS.");
-    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.5, 0, "ESCOLHA A PALAVRA DE ACORDO COM A IMAGEM.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.1, 0, "NO  MODO  'LETRAS':");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.15, 0, "CLIQUE  NAS  LETRAS  QUE  FORMAM  O  NOME  DA  IMAGEM.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.20, 0, "SE  PRECISAR  DE  AJUDA  CLIQUE  NO  BOTÃO  '?'.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.3, 0, "NO  MODO  'IMAGEM':");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.35, 0, "ESCOLHA  A  IMAGEM  DE  ACORDO  COM  A  PALAVRA.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.45, 0, "NO  MODO  PALAVRAS.");
+    al_draw_textf(fonte, al_map_rgb(255, 255,255), LARGURA * 0.1, ALTURA * 0.5, 0, "ESCOLHA  A  PALAVRA  DE  ACORDO  COM  A  IMAGEM.");
 
     al_flip_display();
     al_play_sample(voz,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
