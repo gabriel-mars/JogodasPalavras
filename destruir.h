@@ -36,11 +36,12 @@ int destruir_sobre(int janelaFases, int fundo, int fila_eventos, int play, int p
     return 0;
 }
 
-int destruir_palavras(int janela, int fila_eventos, int fonte, int pergunta, int voz, int icone){
+int destruir_palavras(int janela, int fila_eventos, int fonte, int pergunta, int voz, int icone, int fonte2){
     al_destroy_audio_stream(voz);
     al_destroy_bitmap(pergunta);
     al_destroy_event_queue(fila_eventos);
     al_destroy_font(fonte);
+    al_destroy_font(fonte2);
     al_destroy_display(janela);
     al_destroy_bitmap(icone);
 

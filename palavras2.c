@@ -132,7 +132,7 @@ int casa2(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 }
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -261,7 +261,7 @@ int rato2(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 }
-    destruir_palavras(janela, fila_eventos, fonte,  pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -391,7 +391,7 @@ int dado2(int FPS,int ALTURA,int LARGURA,int pers_sel){
 		}
 	}
 	}
-	destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone);
+	destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
 	return 0;
 
@@ -523,7 +523,7 @@ int barco2(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -654,7 +654,7 @@ int sapato2(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -785,7 +785,7 @@ int escada2(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -916,7 +916,7 @@ int livro2(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -1047,7 +1047,7 @@ int abelha2(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -1178,7 +1178,7 @@ int galo2(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -1309,7 +1309,7 @@ int janela2(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }

@@ -20,6 +20,7 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -51,6 +52,7 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
@@ -225,7 +227,7 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(let1 && let2 && let3 && let4){
                 al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");//Escrevendo a opção no Menu;
+                al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");//Escrevendo a opção no Menu;
                 al_flip_display();
             }
             if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(caixa1) &&
@@ -254,7 +256,7 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
     }
   }
 
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -272,6 +274,7 @@ int rato(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -303,6 +306,7 @@ int rato(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
@@ -477,7 +481,7 @@ int rato(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(let1 && let2 && let3 && let4){
                 al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                 al_flip_display();
             }
 
@@ -508,7 +512,7 @@ int rato(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 }
-    destruir_palavras(janela, fila_eventos, fonte,  pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -527,6 +531,7 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_SAMPLE * parabens = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -559,6 +564,7 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -732,7 +738,7 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1 && let2 && let3 && let4){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(caixa1) &&
@@ -763,7 +769,7 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
       }
      }
 
-    destruir_palavras(janela, fila_eventos, fonte,  pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -781,6 +787,7 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -809,6 +816,7 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3 = al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
@@ -1010,7 +1018,7 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(let1 && let2 && let3 && let4 && let5){
                 al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                 al_flip_display();
             }
 
@@ -1040,7 +1048,7 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
    }
-    destruir_palavras(janela, fila_eventos, fonte,  pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -1058,6 +1066,7 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -1086,6 +1095,7 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
@@ -1316,7 +1326,7 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1 && let2 && let3 && let4 && let5 && let6){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -1346,7 +1356,7 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
    }
-    destruir_palavras(janela, fila_eventos, fonte,  pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -1364,6 +1374,7 @@ int escada(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -1392,6 +1403,7 @@ int escada(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
@@ -1632,7 +1644,7 @@ int escada(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1 && let2 && let3 && let4 && let5 && let6){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -1650,7 +1662,7 @@ int escada(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
    }
-    destruir_palavras(janela, fila_eventos, fonte,  pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -1668,6 +1680,7 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -1696,6 +1709,7 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3 = al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
@@ -1897,7 +1911,7 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(let1 && let2 && let3 && let4 && let5){
                 al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                 al_flip_display();
             }
 
@@ -1927,7 +1941,7 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
    }
-    destruir_palavras(janela, fila_eventos, fonte,  pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -1945,6 +1959,7 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -1973,6 +1988,7 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -2200,7 +2216,7 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1 && let2 && let3 && let4 && let5 && let6){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -2228,7 +2244,7 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
    }
-    destruir_palavras(janela, fila_eventos, fonte,  pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -2247,6 +2263,7 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_SAMPLE * parabens = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -2279,6 +2296,7 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -2452,7 +2470,7 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1 && let2 && let3 && let4){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -2483,7 +2501,7 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
       }
      }
 
-    destruir_palavras(janela, fila_eventos, fonte,  pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
@@ -2502,6 +2520,7 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_SAMPLE * parabens = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
+    ALLEGRO_FONT * fonte2 = NULL;
 
     //Declaração de variáveis
     bool narrador = false;
@@ -2536,6 +2555,7 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
+    fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -2621,7 +2641,6 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
 
                         al_flip_display();
                         let1 = true;
@@ -2649,7 +2668,6 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
 
                         al_flip_display();
                         let2 = true;
@@ -2677,7 +2695,6 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
 
                         al_flip_display();
                         let3 = true;
@@ -2705,7 +2722,6 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
 
                         al_flip_display();
                         let4 = true;
@@ -2733,7 +2749,6 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
 
                         al_flip_display();
                         let5 = true;
@@ -2761,7 +2776,6 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.51, ALTURA * 0.701, 0, "I");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.61, ALTURA * 0.701, 0, "E");//Escrevendo a opção no Menu;
                         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.71, ALTURA * 0.701, 0, "A");//Escrevendo a opção no Menu;
-                        al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.81, ALTURA * 0.701, 0, "?");//Escrevendo a opção no Menu;
 
                         al_flip_display();
                         let6 = true;
@@ -2769,7 +2783,7 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(let1 && let2 && let3 && let4 && let5 && let6){
                     al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.8,0);
-                    al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.806, ALTURA * 0.82, 0, "CONTINUAR");
+                    al_draw_textf(fonte2, al_map_rgb(255, 255, 255), LARGURA * 0.809, ALTURA * 0.82, 0, "CONTINUAR");
                     al_flip_display();
                 }
 
@@ -2784,9 +2798,9 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA* 0.53, 0, "TABELA");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.63, 0, "PANELA");//Escrevendo as dicas;
-                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.81, ALTURA * 0.73, 0, "JANELA");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.82, ALTURA* 0.517, 0, "TABELA");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.82, ALTURA * 0.617, 0, "PANELA");//Escrevendo as dicas;
+                  al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.82, ALTURA * 0.717, 0, "JANELA");//Escrevendo as dicas;
                   al_flip_display();
 
                   }
@@ -2800,7 +2814,7 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
       }
      }
 
-    destruir_palavras(janela, fila_eventos, fonte,  pergunta, voz, icone);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
 
     return 0;
 }
