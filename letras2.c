@@ -279,73 +279,73 @@ int letras2(int FPS, int ALTURA, int LARGURA, int pers_sel){
             }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
                 if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&
                 evento.mouse.x > LARGURA * 0.20 && evento.mouse.x < LARGURA * 0.20 + al_get_bitmap_width(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
                     abelha2(FPS, ALTURA, LARGURA, pers_sel);
                 }
 
                 if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&
                  evento.mouse.x > LARGURA * 0.35 && evento.mouse.x < LARGURA * 0.35 + al_get_bitmap_width(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
                     barco2(FPS, ALTURA, LARGURA, pers_sel);
                  }
 
                 if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&
                  evento.mouse.x > LARGURA * 0.50 && evento.mouse.x < LARGURA * 0.50 + al_get_bitmap_width(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
                     casa2(FPS, ALTURA, LARGURA, pers_sel);
                  }
 
                 if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&
                 evento.mouse.x > LARGURA * 0.65 && evento.mouse.x < LARGURA * 0.65 + al_get_bitmap_width(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
                     livro2(FPS, ALTURA, LARGURA, pers_sel);
                 }
 
                 if(evento.mouse.y > ALTURA * 0.36 && evento.mouse.y < ALTURA * 0.36 + al_get_bitmap_height(play) &&
                 evento.mouse.x > LARGURA * 0.80 && evento.mouse.x < LARGURA * 0.80 + al_get_bitmap_width(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
                     janela2(FPS, ALTURA, LARGURA, pers_sel);
                 }
 
                 if(evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play) &&
                 evento.mouse.x > LARGURA * 0.65 && evento.mouse.x < LARGURA * 0.65 + al_get_bitmap_width(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
                     rato2(FPS, ALTURA, LARGURA, pers_sel);
                 }
 
                 if(evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play) &&
                 evento.mouse.x > LARGURA * 0.80 && evento.mouse.x < LARGURA * 0.80 + al_get_bitmap_width(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
                     dado2(FPS, ALTURA, LARGURA, pers_sel);
                 }
 
                 if(evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play) &&
                 evento.mouse.x > LARGURA * 0.35 && evento.mouse.x < LARGURA * 0.35 + al_get_bitmap_width(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
                     sapato2(FPS, ALTURA, LARGURA, pers_sel);
                 }
 
                 if(evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play) &&
                 evento.mouse.x > LARGURA * 0.50 && evento.mouse.x < LARGURA * 0.50 + al_get_bitmap_width(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
                     escada2(FPS, ALTURA, LARGURA, pers_sel);
                 }
 
                 if(evento.mouse.y > ALTURA * 0.56 && evento.mouse.y < ALTURA * 0.56 + al_get_bitmap_height(play) &&
                 evento.mouse.x > LARGURA * 0.20 && evento.mouse.x < LARGURA * 0.20 + al_get_bitmap_width(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
                     galo2(FPS, ALTURA, LARGURA, pers_sel);
                 }
 
                 if(evento.mouse.y > ALTURA * 0.7 && evento.mouse.y < ALTURA * 0.7 + al_get_bitmap_height(play1) &&
                 evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(play1)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
                     fim(FPS, ALTURA, LARGURA, pers_sel);
                 }
 
                 if(evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(play1) &&
                 evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(play1)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_letras(janela, fila_eventos, fundo, icone, play, play_sel, fonte, play1, play2);
                     main(verifica);
                 }
             }

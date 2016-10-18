@@ -19,7 +19,6 @@ int sobre(int FPS, int ALTURA, int LARGURA){
     ALLEGRO_AUDIO_STREAM * voz1 = NULL;
     ALLEGRO_AUDIO_STREAM * voz2 = NULL;
 
-
     //Declaração de variáveis
     bool aberto = true;
     bool sel1 = false,
@@ -142,8 +141,8 @@ int sobre(int FPS, int ALTURA, int LARGURA){
                 }
                 if(evento.mouse.x >= LARGURA * 0.2 && evento.mouse.x <= LARGURA * 0.2 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.76 && evento.mouse.y <= ALTURA * 0.76 + al_get_bitmap_height(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
                     al_destroy_sample(voz);
+                    destruir_sobre(janela, fundo, fila_eventos, play, play_sel, fonte, icone, fonte2, voz, voz1, voz2);
                     main();
                 }
             }
@@ -157,7 +156,7 @@ int sobre(int FPS, int ALTURA, int LARGURA){
         al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
     }
 
-    destruir_sobre(janela, fundo, fila_eventos, play, play_sel, fonte, icone, fonte2);
+    destruir_sobre(janela, fundo, fila_eventos, play, play_sel, fonte, icone, fonte2, voz, voz1, voz2);
 
     return 0;
 }

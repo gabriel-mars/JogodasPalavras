@@ -122,7 +122,7 @@ int casa3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                     if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                         evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                            al_destroy_display(janela);
+                            destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
                             letras3(FPS, ALTURA, LARGURA,pers_sel);
                     }
                 }
@@ -135,7 +135,7 @@ int casa3(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras3(janela, fila_eventos, fonte, pergunta, icone);
+    destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
 
     return 0;
 }
@@ -253,11 +253,9 @@ int rato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
                     al_flip_display();
                 }
 
-
-
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                        al_destroy_display(janela);
+                        destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
                         letras3(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
@@ -270,7 +268,7 @@ int rato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
+    destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
 
     return 0;
 }
@@ -284,7 +282,6 @@ int dado3(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * caixa3 = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_BITMAP * pergunta = NULL;
-    ALLEGRO_SAMPLE * parabens = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_FONT * fonte2 = NULL;
@@ -390,7 +387,7 @@ int dado3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
+                    destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
                     letras3(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
@@ -403,7 +400,7 @@ int dado3(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
+    destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
 
     return 0;
 }
@@ -522,7 +519,7 @@ int barco3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                        al_destroy_display(janela);
+                        destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
                         letras3(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
@@ -535,7 +532,7 @@ int barco3(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
+    destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
 
     return 0;
 }
@@ -654,7 +651,7 @@ int sapato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                        al_destroy_display(janela);
+                        destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
                         letras3(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
@@ -667,7 +664,7 @@ int sapato3(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
+    destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
 
     return 0;
 }
@@ -787,7 +784,7 @@ int escada3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                        al_destroy_display(janela);
+                        destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
                         letras3(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
@@ -800,7 +797,7 @@ int escada3(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
+    destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
 
     return 0;
 }
@@ -919,7 +916,7 @@ int livro3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                        al_destroy_display(janela);
+                        destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
                         letras3(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
@@ -932,7 +929,7 @@ int livro3(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
+    destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
 
     return 0;
 }
@@ -1052,7 +1049,7 @@ int abelha3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                        al_destroy_display(janela);
+                        destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
                         letras3(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
@@ -1065,7 +1062,7 @@ int abelha3(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
+    destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
 
     return 0;
 }
@@ -1187,7 +1184,7 @@ int galo3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                        al_destroy_display(janela);
+                        destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
                         letras3(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
@@ -1200,7 +1197,7 @@ int galo3(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
+    destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
 
     return 0;
 }
@@ -1320,7 +1317,7 @@ int janela3(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                        al_destroy_display(janela);
+                        destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
                         letras3(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
@@ -1333,7 +1330,7 @@ int janela3(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 
-    destruir_palavras3(janela, fila_eventos, fonte,  pergunta, icone);
+    destruir_palavras3(janela, fundo, avancar, caixa1, caixa3, icone, pergunta, fila_eventos, fonte, fonte2);
 
     return 0;
 }

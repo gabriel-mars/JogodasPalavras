@@ -18,7 +18,6 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_AUDIO_STREAM * voz1 = NULL;
-    ALLEGRO_AUDIO_STREAM * voz2 = NULL;
     ALLEGRO_AUDIO_STREAM * voz3 = NULL;
 
     //Declaração de variáveis
@@ -51,7 +50,6 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     icone = al_load_bitmap("Arte/icone2.png");
     voz1 = al_load_sample("Narrador/voltar_menu.ogg");
-    voz2 = al_load_sample("Narrador/avancar.ogg");
     voz3 = al_load_sample("Narrador/personagem.ogg");
 
     //Adição do eventos na fila
@@ -124,29 +122,30 @@ int personagens(int FPS, int ALTURA, int LARGURA){
                 //Alterando as páginas com clique
                 if(evento.mouse.x >= LARGURA * 0.05 && evento.mouse.x <= LARGURA * 0.05 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.76 && evento.mouse.y <= ALTURA * 0.76 + al_get_bitmap_height(play)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_personagens(janela, fila_eventos, play, play_sel, fundo, fonte, icone);
                     main();
-                }if(evento.mouse.x >= LARGURA * 0.05 && evento.mouse.x <= LARGURA * 0.05 + al_get_bitmap_width(pers1) &&
+                }
+                if(evento.mouse.x >= LARGURA * 0.05 && evento.mouse.x <= LARGURA * 0.05 + al_get_bitmap_width(pers1) &&
                     evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                    destruir_personagens(janela, fila_eventos, play, play_sel, fundo, fonte, icone);
                     pers_sel  = pers1;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
                 }
-                if(evento.mouse.x >= LARGURA * 0.3 && evento.mouse.x <= LARGURA * 0.3 + al_get_bitmap_width(pers1) &&
-                    evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                if(evento.mouse.x >= LARGURA * 0.3 && evento.mouse.x <= LARGURA * 0.3 + al_get_bitmap_width(pers2) &&
+                    evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers2)){
+                    destruir_personagens(janela, fila_eventos, play, play_sel, fundo, fonte, icone);
                     pers_sel  = pers2;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
                 }
-                if(evento.mouse.x >= LARGURA * 0.55 && evento.mouse.x <= LARGURA * 0.55 + al_get_bitmap_width(pers1) &&
-                    evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                if(evento.mouse.x >= LARGURA * 0.55 && evento.mouse.x <= LARGURA * 0.55 + al_get_bitmap_width(pers3) &&
+                    evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers3)){
+                    destruir_personagens(janela, fila_eventos, play, play_sel, fundo, fonte, icone);
                     pers_sel  = pers3;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
                 }
-                if(evento.mouse.x >= LARGURA * 0.80 && evento.mouse.x <= LARGURA * 0.80 + al_get_bitmap_width(pers1) &&
-                    evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers1)){
-                    destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                if(evento.mouse.x >= LARGURA * 0.80 && evento.mouse.x <= LARGURA * 0.80 + al_get_bitmap_width(pers4) &&
+                    evento.mouse.y >= ALTURA * 0.36 && evento.mouse.y <= ALTURA * 0.36 + al_get_bitmap_height(pers4)){
+                    destruir_personagens(janela, fila_eventos, play, play_sel, fundo, fonte, icone);
                     pers_sel  = pers4;
                     teste(FPS, ALTURA, LARGURA, pers_sel);
                 }
@@ -162,7 +161,7 @@ int personagens(int FPS, int ALTURA, int LARGURA){
         al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
     }
 
-    int destruir_personagens(janela, fila_eventos, pers1, pers2, pers3, play, play_sel, fundo, fonte, icone, voz1, voz2);
+    destruir_personagens(janela, fila_eventos, play, play_sel, fundo, fonte, icone);
 
     return 0;
 }

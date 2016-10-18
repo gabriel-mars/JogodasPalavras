@@ -132,92 +132,77 @@ int teste(int FPS,int ALTURA,int LARGURA, int pers_sel){
                     al_draw_bitmap(play_sel, LARGURA * 0.42, ALTURA * 0.25, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.443, ALTURA * 0.265, 0, "LETRAS");//Escrevendo a opção no Menu;
 
-                 /*   if(opcao != 1){
+                    if(opcao != 1){
+                        al_play_sample(voz1,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
                         opcao = 1;
-                    }*/
+                    }
                     opcao = 1;
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.42, ALTURA * 0.25, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.443, ALTURA * 0.265, 0, "LETRAS");//Escrevendo a opção no Menu;
+                    //al_destroy_sample(voz1);
                 }
 
                 if(sel2){
                     al_draw_bitmap(play_sel, LARGURA * 0.42, ALTURA * 0.5, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.435, ALTURA * 0.515, 0, "IMAGENS");//Escrevendo a opção no Menu;
 
-                    /*if(opcao != 2){
+                    if(opcao != 2){
                         al_play_sample(voz2,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
                         opcao = 2;
-                    }*/
+                    }
                     opcao = 2;
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.42, ALTURA * 0.5, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.435, ALTURA * 0.515, 0, "IMAGENS");//Escrevendo a opção no Menu;
+                    //al_destroy_sample(voz2);
                 }
 
                 if(sel3){
                     al_draw_bitmap(play_sel, LARGURA * 0.42, ALTURA * 0.75, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.43, ALTURA * 0.765, 0, "PALAVRAS");//Escrevendo a opção no Menu;
 
-                    /*if(opcao != 2){
+                    if(opcao != 3){
                         al_play_sample(voz3,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
-                        opcao = 2;
-                    }*/
+                        opcao = 3;
+                    }
                     opcao = 3;
                 }else{
                     al_draw_bitmap(play, LARGURA * 0.42, ALTURA * 0.75, 0);
                     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.43, ALTURA * 0.765, 0, "PALAVRAS");//Escrevendo a opção no Menu;
-                }if (opcao == 1){
-
-                    al_play_sample(voz1,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
-                     }else if(opcao == 2){
-
-                        al_play_sample(voz2,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
-                    }else if(opcao == 3){
-
-                        al_play_sample(voz3,1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
-
-                    }
+                    //al_destroy_sample(voz3);
+                }
 
                 }else if(evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP){
                     //Alterando as páginas com clique
                     if(evento.mouse.x >= LARGURA * 0.42 && evento.mouse.x <= LARGURA * 0.42 + al_get_bitmap_width(play) &&
                         evento.mouse.y >= ALTURA * 0.25 && evento.mouse.y <= ALTURA * 0.25 + al_get_bitmap_height(play)){
-                        al_destroy_sample(voz1);
-                        al_destroy_sample(voz2);
-                        al_destroy_sample(voz3);
-                        destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                        destruir_fases(janela, fundo, fila_eventos, play, play_sel, icone, voz1, voz2, voz3, fonte);
                         letras(FPS, ALTURA, LARGURA, pers_sel);
                     }
+
                     if(evento.mouse.x >= LARGURA * 0.42 && evento.mouse.x <= LARGURA * 0.42 + al_get_bitmap_width(play) &&
                         evento.mouse.y >= ALTURA * 0.5 && evento.mouse.y <= ALTURA * 0.5 + al_get_bitmap_height(play)){
-                        al_destroy_sample(voz1);
-                        al_destroy_sample(voz2);
-                        al_destroy_sample(voz3);
-                        destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                        destruir_fases(janela, fundo, fila_eventos, play, play_sel, icone, voz1, voz2, voz3, fonte);
                         letras2(FPS, ALTURA, LARGURA, pers_sel);
                     }
+
                     if(evento.mouse.x >= LARGURA * 0.42 && evento.mouse.x <= LARGURA * 0.42 + al_get_bitmap_width(play) &&
                         evento.mouse.y >= ALTURA * 0.75 && evento.mouse.y <= ALTURA * 0.75 + al_get_bitmap_height(play)){
-                        al_destroy_sample(voz1);
-                        al_destroy_sample(voz2);
-                        al_destroy_sample(voz3);
-                        destruir_pagina(janela, play, play_sel, fundo, icone, fila_eventos, fonte);
+                        destruir_fases(janela, fundo, fila_eventos, play, play_sel, icone, voz1, voz2, voz3, fonte);
                         letras3(FPS, ALTURA, LARGURA, pers_sel);
                     }
                 }
             }
         al_flip_display();
         }
-    //Calculo Para Controlar FPS
-
     tempo_fin = al_get_time() - tempo_ini;
 
     if(tempo_fin < 1.0 / FPS){
         al_rest((1.0 / FPS) - (al_get_time()- tempo_ini));
     }
 
-    destruir_fases(janela, fundo, fila_eventos, play, play_sel);
+    destruir_fases(janela, fundo, fila_eventos, play, play_sel, icone, voz1, voz2, voz3, fonte);
 
     return 0;
 }

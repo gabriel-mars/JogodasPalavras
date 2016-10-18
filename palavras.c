@@ -13,11 +13,9 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_BITMAP * avancar = NULL;
     ALLEGRO_BITMAP * caixa1 = NULL;
-    ALLEGRO_BITMAP * caixa2 = NULL;
     ALLEGRO_BITMAP * caixa3 = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_BITMAP * pergunta = NULL;
-    ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_FONT * fonte2 = NULL;
@@ -49,11 +47,9 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
     avancar = al_load_bitmap("Arte/barrinha.png");
     icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/caixa1.png");
-    caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
-    voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -243,7 +239,7 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                 evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
+                    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
                     letras(FPS, ALTURA, LARGURA,pers_sel);
             }
         }
@@ -256,7 +252,7 @@ int casa(int FPS,int ALTURA,int LARGURA,int pers_sel){
     }
   }
 
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
 
     return 0;
 }
@@ -267,11 +263,9 @@ int rato(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_BITMAP * avancar = NULL;
     ALLEGRO_BITMAP * caixa1 = NULL;
-    ALLEGRO_BITMAP * caixa2 = NULL;
     ALLEGRO_BITMAP * caixa3 = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_BITMAP * pergunta = NULL;
-    ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_FONT * fonte2 = NULL;
@@ -303,11 +297,9 @@ int rato(int FPS,int ALTURA,int LARGURA,int pers_sel){
     avancar = al_load_bitmap("Arte/barrinha.png");
     icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/caixa1.png");
-    caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
-    voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -500,7 +492,7 @@ int rato(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                 evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
+                    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
                     letras(FPS, ALTURA, LARGURA,pers_sel);
             }
         }
@@ -512,7 +504,7 @@ int rato(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
 }
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
 
     return 0;
 }
@@ -523,12 +515,9 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_BITMAP * avancar = NULL;
     ALLEGRO_BITMAP * caixa1 = NULL;
-    ALLEGRO_BITMAP * caixa2 = NULL;
     ALLEGRO_BITMAP * caixa3 = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_BITMAP * pergunta = NULL;
-    ALLEGRO_SAMPLE * voz = NULL;
-    ALLEGRO_SAMPLE * parabens = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_FONT * fonte2 = NULL;
@@ -561,7 +550,6 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
     avancar = al_load_bitmap("Arte/barrinha.png");
     icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/caixa1.png");
-    caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
@@ -756,7 +744,7 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
+                    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
                     letras(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
@@ -769,7 +757,7 @@ int dado(int FPS,int ALTURA,int LARGURA,int pers_sel){
       }
      }
 
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
 
     return 0;
 }
@@ -780,11 +768,9 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_BITMAP * avancar = NULL;
     ALLEGRO_BITMAP * caixa1 = NULL;
-    ALLEGRO_BITMAP * caixa2 = NULL;
     ALLEGRO_BITMAP * caixa3 = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_BITMAP * pergunta = NULL;
-    ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_FONT * fonte2 = NULL;
@@ -813,11 +799,9 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
     avancar = al_load_bitmap("Arte/barrinha.png");
     icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/caixa1.png");
-    caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3 = al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
-    voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -1024,12 +1008,12 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                 evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
+                    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
                     letras(FPS, ALTURA, LARGURA,pers_sel);
             }
+
             if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(caixa1) &&
                 evento.mouse.y > ALTURA * 0.7 && evento.mouse.y < ALTURA * 0.7 + al_get_bitmap_height(caixa1)){
-
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.5,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.6,0);
                   al_draw_bitmap(avancar, LARGURA * 0.8, ALTURA * 0.7,0);
@@ -1037,8 +1021,7 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
                   al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.83, ALTURA * 0.615, 0, "BARCO");//Escrevendo as dicas;
                   al_draw_textf(fonte, al_map_rgb(255,255,255),LARGURA * 0.83, ALTURA * 0.715, 0, "PASTO");//Escrevendo as dicas;
                   al_flip_display();
-
-                  }
+            }
         }
 
         tempo_fin = al_get_time() - tempo_ini;
@@ -1048,7 +1031,7 @@ int barco(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
    }
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
 
     return 0;
 }
@@ -1059,11 +1042,9 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_BITMAP * avancar = NULL;
     ALLEGRO_BITMAP * caixa1 = NULL;
-    ALLEGRO_BITMAP * caixa2 = NULL;
     ALLEGRO_BITMAP * caixa3 = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_BITMAP * pergunta = NULL;
-    ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_FONT * fonte2 = NULL;
@@ -1092,11 +1073,9 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
     avancar = al_load_bitmap("Arte/barrinha.png");
     icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/caixa1.png");
-    caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
-    voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -1332,7 +1311,7 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                        al_destroy_display(janela);
+                        destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
                         letras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(caixa1) &&
@@ -1356,7 +1335,7 @@ int sapato(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
    }
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
 
     return 0;
 }
@@ -1367,11 +1346,9 @@ int escada(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_BITMAP * avancar = NULL;
     ALLEGRO_BITMAP * caixa1 = NULL;
-    ALLEGRO_BITMAP * caixa2 = NULL;
     ALLEGRO_BITMAP * caixa3 = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_BITMAP * pergunta = NULL;
-    ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_FONT * fonte2 = NULL;
@@ -1400,11 +1377,9 @@ int escada(int FPS,int ALTURA,int LARGURA,int pers_sel){
     avancar = al_load_bitmap("Arte/barrinha.png");
     icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/caixa1.png");
-    caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
-    voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -1650,7 +1625,7 @@ int escada(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                        al_destroy_display(janela);
+                        destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
                         letras(FPS, ALTURA, LARGURA,pers_sel);
                 }
             }
@@ -1662,7 +1637,7 @@ int escada(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
    }
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
 
     return 0;
 }
@@ -1673,11 +1648,9 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_BITMAP * avancar = NULL;
     ALLEGRO_BITMAP * caixa1 = NULL;
-    ALLEGRO_BITMAP * caixa2 = NULL;
     ALLEGRO_BITMAP * caixa3 = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_BITMAP * pergunta = NULL;
-    ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_FONT * fonte2 = NULL;
@@ -1706,11 +1679,9 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
     avancar = al_load_bitmap("Arte/barrinha.png");
     icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/caixa1.png");
-    caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3 = al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
-    voz = al_load_sample("Arte/rato.ogg");
     fila_eventos = al_create_event_queue(); //Criação da fila de eventos
 
     //Adição do eventos na fila
@@ -1917,7 +1888,7 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
             if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                 evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
+                    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
                     letras(FPS, ALTURA, LARGURA, pers_sel);
             }
             if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(caixa1) &&
@@ -1941,7 +1912,7 @@ int livro(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
    }
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
 
     return 0;
 }
@@ -1952,11 +1923,9 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_BITMAP * avancar = NULL;
     ALLEGRO_BITMAP * caixa1 = NULL;
-    ALLEGRO_BITMAP * caixa2 = NULL;
     ALLEGRO_BITMAP * caixa3 = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_BITMAP * pergunta = NULL;
-    ALLEGRO_AUDIO_STREAM * voz = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_FONT * fonte2 = NULL;
@@ -1986,7 +1955,6 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
     avancar = al_load_bitmap("Arte/barrinha.png");
     icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/caixa1.png");
-    caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
@@ -2224,7 +2192,7 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                        al_destroy_display(janela);
+                        destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
                         letras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(caixa1) &&
@@ -2246,7 +2214,7 @@ int abelha(int FPS,int ALTURA,int LARGURA,int pers_sel){
         }
     }
    }
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
 
     return 0;
 }
@@ -2257,12 +2225,9 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_BITMAP * avancar = NULL;
     ALLEGRO_BITMAP * caixa1 = NULL;
-    ALLEGRO_BITMAP * caixa2 = NULL;
     ALLEGRO_BITMAP * caixa3 = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_BITMAP * pergunta = NULL;
-    ALLEGRO_SAMPLE * voz = NULL;
-    ALLEGRO_SAMPLE * parabens = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_FONT * fonte2 = NULL;
@@ -2295,7 +2260,6 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
     avancar = al_load_bitmap("Arte/barrinha.png");
     icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/caixa1.png");
-    caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
@@ -2478,7 +2442,7 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
+                    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
                     letras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(caixa1) &&
@@ -2503,7 +2467,7 @@ int galo(int FPS,int ALTURA,int LARGURA,int pers_sel){
       }
      }
 
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
 
     return 0;
 }
@@ -2514,12 +2478,9 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
     ALLEGRO_BITMAP * fundo = NULL;
     ALLEGRO_BITMAP * avancar = NULL;
     ALLEGRO_BITMAP * caixa1 = NULL;
-    ALLEGRO_BITMAP * caixa2 = NULL;
     ALLEGRO_BITMAP * caixa3 = NULL;
     ALLEGRO_BITMAP * icone = NULL;
     ALLEGRO_BITMAP * pergunta = NULL;
-    ALLEGRO_SAMPLE * voz = NULL;
-    ALLEGRO_SAMPLE * parabens = NULL;
     ALLEGRO_EVENT_QUEUE * fila_eventos = NULL;
     ALLEGRO_FONT * fonte = NULL;
     ALLEGRO_FONT * fonte2 = NULL;
@@ -2554,7 +2515,6 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
     avancar = al_load_bitmap("Arte/barrinha.png");
     icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/caixa1.png");
-    caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
     fonte = al_load_ttf_font("Arte/Arial.ttf", 30, 0);
     fonte2 = al_load_ttf_font("Arte/Arial.ttf", 25, 0);
@@ -2791,7 +2751,7 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
 
                if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(avancar) &&
                     evento.mouse.y > ALTURA * 0.8 && evento.mouse.y < ALTURA * 0.8 + al_get_bitmap_height(avancar)){
-                    al_destroy_display(janela);
+                    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
                     letras(FPS, ALTURA, LARGURA,pers_sel);
                 }
                 if(evento.mouse.x > LARGURA * 0.8 && evento.mouse.x < LARGURA * 0.8 + al_get_bitmap_width(caixa1) &&
@@ -2816,7 +2776,7 @@ int janela1(int FPS,int ALTURA,int LARGURA,int pers_sel){
       }
      }
 
-    destruir_palavras(janela, fila_eventos, fonte, pergunta, voz, icone, fonte2);
+    destruir_palavras(janela, fila_eventos, fonte, pergunta, icone, fonte2, fundo, avancar, caixa1, caixa3);
 
     return 0;
 }

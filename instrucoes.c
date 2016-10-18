@@ -145,7 +145,7 @@ int instrucoes(int FPS, int ALTURA, int LARGURA){
                 if(evento.mouse.x >= LARGURA * 0.2 && evento.mouse.x <= LARGURA * 0.2 + al_get_bitmap_width(play) &&
                     evento.mouse.y >= ALTURA * 0.76 && evento.mouse.y <= ALTURA * 0.76 + al_get_bitmap_height(play)){
                     al_destroy_sample(voz);
-                    al_destroy_display(janela);
+                    destruir_instrucoes(janela, fundo, fila_eventos, play, play_sel, fonte, icone, voz, voz1, voz2);
                     main();
                 }
             }
