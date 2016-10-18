@@ -26,7 +26,7 @@ int personagens(int FPS, int ALTURA, int LARGURA){
     bool sel1 = false;
     double tempo_ini = 0,
            tempo_fin = 0;
-    int * pers_selPtr;
+    int *pers_selPtr;
     int pers_sel;
     int opcao = 0;
 

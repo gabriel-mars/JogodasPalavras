@@ -580,7 +580,7 @@ int sapato2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     selecao = al_load_bitmap("Arte/selecao.png");
     fundo = al_load_bitmap("Arte/Plano-de-fundo.png");
     avancar = al_load_bitmap("Arte/barrinha.png");
-    icone = al_load_bitmap("Arte/icone.png");
+    icone = al_load_bitmap("Arte/icone2.png");
     caixa1 = al_load_bitmap("Arte/caixa1.png");
     caixa2 = al_load_bitmap("Arte/caixa2.png");
     caixa3= al_load_bitmap("Arte/caixa3.png");
@@ -604,7 +604,7 @@ int sapato2(int FPS,int ALTURA,int LARGURA,int pers_sel){
     al_draw_bitmap(pers_sel, LARGURA * 0.08, ALTURA * 0.6, 0);
 
     al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA * 0.35, ALTURA * 0.1, 0, "SELECIONE MINHA IMAGEM:");
-    al_draw_textf(fonte3, al_map_rgb(255, 0, 0), LARGURA * 0.47, ALTURA * 0.2, 0, "SAPATO");//Escrevendo a opção no Menu;
+    al_draw_textf(fonte3, al_map_rgb(255, 0, 0), LARGURA * 0.44, ALTURA * 0.2, 0, "SAPATO");//Escrevendo a opção no Menu;
 
     al_draw_bitmap(pergunta, LARGURA * 0.24, ALTURA * 0.36, 0);
     al_draw_bitmap(erro1, LARGURA * 0.47, ALTURA * 0.36, 0);
